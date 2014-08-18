@@ -1,1 +1,108 @@
 @import 'normalize.styl'
+@import 'fonts.styl'
+
+azul_bonito = #4799EA
+gris_oscuro = #1D1D19
+gris_claro = #333
+rosa_bonito = #EC2849
+verde_fuerte = #3F9F51
+
+a
+	text-decoration none
+
+body
+	font-family: 'Varela Round', sans-serif;
+
+header
+	background black
+	position fixed
+	top 0
+	width 100%
+	z-index 1000
+	height 5.5em
+
+h1
+	font-size 2.1em
+	margin 0
+	text-align center
+	color white
+	line-height 2.7em
+
+	strong
+		color azul_bonito
+		border-left 2px solid azul_bonito
+		padding-left 0.2em
+figure
+	margin 0
+
+.menu
+	right 0.5em
+	margin-top -20px
+	position absolute
+	font-size 2.5em
+	top 50%
+	color white
+
+.wrap
+	width 100%
+
+.center-block
+	margin 0 auto
+
+.center-text
+	text-align center
+
+.opc 
+	display none
+
+.left
+	float left
+
+.right
+	float right
+
+.small
+	margin-top 5.5em
+
+	.saludo
+		font-size 2em
+		color gris_oscuro
+		display block
+		margin-bottom 0.5em
+		color white
+
+	.descripcion
+		color white
+
+.avatar
+	img
+		width 10em
+		border-radius 50%
+
+.elements_bienvenida
+	padding 1em
+	background rosa_bonito
+
+.sobre_mi
+	padding 1em
+	background verde_fuerte
+	color gris_oscuro
+
+.icons_mi
+	font-size 1.5em
+
+	.text
+		font-family: 'Varela Round', sans-serif;
+
+.smalltwo
+	.elements_sobre_mi
+		display block
+
+@media screen and (min-width:480px)
+	.mediumtwo
+		.elements_sobre_mi
+			display inline-block
+
+
+
+
