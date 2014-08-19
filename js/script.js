@@ -10,9 +10,12 @@ $(document).ready(function(){
 	}
 	var target = null;
 	$('.image').hover(function(e){
-    	target = $(this);
-    	$(target[0].firstElementChild).fadeIn(300);
+		target = $(this);
+		$(target[0].firstElementChild).fadeIn(300);
 	}, function(){
-    	$(target[0].firstElementChild).fadeOut(300);
+		$(target[0].firstElementChild).fadeOut(300);
+	});
+	$(".menu").click(function () {
+		$('.opc').slideToggle();
 	});
 });

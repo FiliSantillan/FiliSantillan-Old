@@ -27,12 +27,10 @@ header
 	top 0
 	width 100%
 	z-index 1000
-	height 5.5em
 
 h1
 	font-size 2.1em
 	margin 0
-	text-align center
 	color white
 	line-height 2.7em
 	font-family: 'Cherry Swash', cursive;
@@ -54,15 +52,11 @@ figure
 	margin-top -20px
 	position absolute
 	font-size 2.5em
-	top 50%
+	top 1em
 	color white
 
 	&:hover
 		color azul_bonito
-
-
-.wrap
-	width 100%
 
 .center-block
 	margin 0 auto
@@ -70,9 +64,24 @@ figure
 .center-text
 	text-align center
 
-.opc 
+.opc
 	display none
-
+	ul
+		list-style none
+		padding 0
+		li
+			a
+				color azul_bonito
+				font-size 1.2em
+				text-decoration none
+				display block
+				padding 1em
+				border 2px solid transparent
+				border-radius 5px
+			a:hover
+				border 2px solid azul_bonito
+				border-radius 5px
+				color white
 .left
 	float left
 
@@ -294,6 +303,19 @@ figure
 		.elements_sobre_mi
 			display inline-block
 
+@media screen and (min-width:1000px)
+	.header
+		.opc
+			display block
+			float right
+			margin-right 1em
+			li
+				display inline-block
+		.menu
+			display none
 
+	h1
+		float left
+		margin-left 1em
 
 
