@@ -8,4 +8,11 @@ $(document).ready(function(){
 			$('.header').removeClass('MainMenu-scrolled');
 		}
 	}
+	var target = null;
+	$('.image').hover(function(e){
+    	target = $(this);
+    	$(target[0].firstElementChild).fadeIn(300);
+	}, function(){
+    	$(target[0].firstElementChild).fadeOut(300);
+	});
 });
