@@ -128,7 +128,6 @@ figure
 		font-family: 'Varela Round', sans-serif;
 
 .image
-	margin-top 1.5em
 	display inline-block
 
 	img
@@ -137,46 +136,31 @@ figure
 		z-index: -1;
 
 .img_desc
-	width 10em
-	height 10em
-	position absolute
-	margin 0 auto
-	left 0
-	right 0
-	z-index 2
-	border-radius 50%
-	background rgba(black,0.7)
-	display none
-	border 2px solid white
-
 	a
-		color white
-		font-size 2em
-		line-height 5em
-
-		&:nth-child(1)
-			margin-right 0.5em
-
-		&:hover
-			color rosa_bonito
+		display none
 
 .inspiraciones
 	padding 1em
 	background azul_claro
+	text-align center
 
-	.name
-		font-size 1.5em
-		display block
-		margin-bottom 0.5em
-		color white
+	.elements_inspiraciones
+		position relative
+		margin 2.5em 0
 
-	.descripcion
-		color gris_oscuro
-		a
+		.name
+			font-size 1.5em
+			display block
+			margin-bottom 0.5em
 			color white
 
-		a:hover
-			color rosa_bonito
+		.descripcion
+			color gris_oscuro
+			a
+				color white
+
+			a:hover
+				color rosa_bonito
 
 .imagetwo
 	margin-top 1.5em
@@ -185,13 +169,8 @@ figure
 		width 12em
 		height 12em
 
-	#img
-		height 10em
-
-	#img3
-		width 15em
-		height 8em
-		
+	#imagetwo
+		width 16em
 
 .formacion
 	padding 1em
@@ -215,7 +194,7 @@ figure
 	border-bottom 5px solid azul_bonito
 	padding-bottom 1em
 
-.lenguajes_formacion
+.elements_formacion
 	.dominio
 		display block
 		margin-bottom 0.5em
@@ -230,6 +209,9 @@ figure
 		background azul_bonito
 		border-radius 6px
 		border 1px solid black
+
+.lenguajes
+	margin-bottom 5em
 
 .lenguaje
 	margin-top 1.5em
@@ -291,6 +273,7 @@ figure
 
 .correo
 	display none
+
 .form
 	input
 		display block
@@ -352,7 +335,7 @@ figure
 .fondo_tablet
 	display none
 
-@media screen and (min-width:480px)
+@media screen and (min-width:668px)
 	.avatar_tablet
 		z-index 2
 		position relative
@@ -386,10 +369,135 @@ figure
 		.columna2
 			float right
 
+	.inspiraciones
+		padding 3em
+		background azul_claro
+
+		.elements_inspiraciones
+			position relative
+			border-bottom 3px solid black
+
+			&:nth-child(odd)
+				text-align left
+
+			&:nth-child(even)
+				text-align right
+
+			&:nth-child(6)
+				border-bottom 3px solid transparent
+				margin-bottom -5em
+
+			.info
+				position absolute
+				width 75%
+				top 1.5em
+				padding-bottom 1em
+
+			.par
+				left 11.5em
+
+			.inpar
+				right 11.5em
+	.image
+		display inline-block
+		margin-bottom 5em
+		border 3px solid white
+		border-radius 50%
+		height 10em
+
+	.formacion
+		overflow hidden
+
+	.elements_formacion
+		width 47%
+		margin-top 5em
+		height 350px
+
+		&:nth-child(4)
+			border-bottom 5px solid transparent
+			padding-bottom 0
+		
+		&:nth-child(odd)
+			float left
+
+		&:nth-child(even)
+			float right
+			margin-right 3%
+
+	.lenguajes
+		height 200px
+		margin-bottom 0
+
+		.lenguaje
+			float left
+			margin 0 1em 5em 0
+
+		.info_lenguajes
+			text-align left
+
+			.name
+				display inline-block
+
+			.dominio
+				display inline-block
+				margin-left 0.5em
+
+			.prox
+				display block
+
+			.descripcion
+				display block
+
+	.contacto
+		text-align left
+		overflow hidden
+		padding 3em
+		position relative
+		
+		.despedida
+			position absolute
+			top 3em
+			left 10em
+
+		.img_despedida
+			display inline-block
+			margin-top 2em
+			float left
+
+			img
+				width 15em
+
+		.contacto_icons
+			font-size 3em
+			float left
+			margin 2.5em 0 0 0.5em
+
+			.mail
+				display none
+
+		#globo
+			display none
+
+		.correo
+			display block
+
+			.form
+				float left
+				padding 1em 0 0 1em
+
+				textarea
+					float left
+					margin-right 0.5em
+					width 15em
+					height 9em
+
+				.button
+					float left
+					
 
 
 
-@media screen and (min-width:1000px)
+@media screen and (min-width:1100px)
 	.header
 		.opc
 			display block
@@ -403,5 +511,30 @@ figure
 	h1
 		float left
 		margin-left 1em
+
+	.img_desc
+		width 10em
+		height 10em
+		position absolute
+		margin 0 auto
+		left 0
+		right 0
+		z-index 2
+		border-radius 50%
+		background rgba(black,0.7)
+		display none
+		border 2px solid white
+
+		a
+			color white
+			font-size 2em
+			line-height 5em
+			display inline-block
+
+			&:nth-child(1)
+				margin-right 0.5em
+
+			&:hover
+				color rosa_bonito
 
 
