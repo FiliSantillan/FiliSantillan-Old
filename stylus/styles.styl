@@ -332,6 +332,19 @@ figure
 	strong
 		margin 1em 0
 
+	.social_me
+		.fb-follow
+			top 0.6em
+			margin-right 1em
+
+		.twitter_share
+			display inline-block
+			margin-right 1em
+		
+
+.img_person
+	display none
+
 .fondo_tablet
 	display none
 
@@ -478,22 +491,54 @@ figure
 		#globo
 			display none
 
-		.correo
-			display block
+	.correo
+		display block
 
-			.form
+		.form
+			float left
+			padding 1em 0 0 1em
+
+			textarea
 				float left
-				padding 1em 0 0 1em
+				margin-right 0.5em
+				width 15em
+				height 9em
 
-				textarea
-					float left
-					margin-right 0.5em
-					width 15em
-					height 9em
+			.button
+				float left
+	.footer
+		overflow hidden
 
-				.button
-					float left
-					
+		.info_footer
+			float left
+			text-align left
+
+			.fili
+				float left
+
+			.memo
+				float left
+
+		.img_person
+			float left
+			text-align left
+			top 2em
+			display inline-block
+			img
+				border-radius 50%
+				width 7em
+				height 7em
+				float left
+				margin-top 1em
+				border 3px solid white
+
+				&:nth-child(1)
+					margin 1em 2em 0 3em
+
+		.social_me
+			float right
+			margin-top 1em
+
 
 
 
