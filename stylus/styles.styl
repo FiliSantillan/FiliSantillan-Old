@@ -20,11 +20,12 @@ body
 	font-family: 'Varela Round', sans-serif;
 
 header
-	background black
+	background rgba(black,0.8)
 	position fixed
 	top 0
 	width 100%
 	z-index 1000
+	border-bottom 3px solid white
 
 h1
 	font-size 2.1em
@@ -37,15 +38,6 @@ h1
 		color azul_bonito
 		border-left 2px solid azul_bonito
 		padding-left 0.2em
-
-.beta
-	padding 0.5em
-	background amarillo_bonito
-	border-radius 10px
-	text-transform uppercase
-	font-size 1.3em
-	font-weight bold
-	border 3px solid azul_bonito
 
 .despedida
 	font-size 2em
@@ -65,7 +57,7 @@ figure
 		color azul_bonito
 
 .center-block
-	margin 0 auto
+	margin 0 auto 
 
 .center-text
 	text-align center
@@ -95,7 +87,8 @@ figure
 	float right
 
 .bienvenida
-	margin-top 7.2em
+	margin-top 5.6em
+	background rosa_bonito
 
 	.saludo
 		font-size 2em
@@ -114,7 +107,6 @@ figure
 
 .elements_bienvenida
 	padding 1em
-	background rosa_bonito
 
 .sobre_mi
 	padding 1em
@@ -364,7 +356,7 @@ figure
 
 	.fondo_tablet
 		display block
-		top 7.2em
+		top 5.6em
 		left 0
 		position absolute
 		z-index 1
@@ -581,5 +573,47 @@ figure
 
 			&:hover
 				color rosa_bonito
+
+	.fondo_tablet
+		display none
+
+	.bienvenida
+		background url(../img/yo/fondo_desktop.jpg) no-repeat center center fixed
+		background-size: cover;
+		margin-top 0
+		height 900px
+
+		.elements_bienvenida
+			padding 5em 12em
+
+			.saludo
+				font-size 4em
+				margin-top 2em
+				text-shadow 5px 5px 10px black
+
+			.descripcion
+				display block
+				margin-top 0
+
+			.down
+				margin-top 2.7em
+				display inline-block
+				padding 1em
+				border 10px solid white
+				border-radius 50%
+				opacity 0.5
+				transition 0.3s
+
+				.flechita
+					color white
+					font-size 2em
+
+			.down:hover
+				opacity 1
+
+	.avatar_desktop
+		z-index 2
+		position relative
+		top 5em
 
 
