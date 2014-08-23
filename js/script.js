@@ -16,7 +16,7 @@ $(document).ready(function(){
 	});
 	$(function(){
 	//clic en un enlace de la lista
-	$('ul li a').on('click',function(e){
+	$('.list li a').on('click',function(e){
 		//prevenir en comportamiento predeterminado del enlace
 		e.preventDefault();
 		//obtenemos el id del elemento en el que debemos posicionarnos
