@@ -385,11 +385,12 @@
 			<a href="#" class="icon-mail mail"></a>
 		</div>
 		<div class="correo">
-			<form class="form">
+			<form class="form" action="php/contacto.php" method="POST">
 				<textarea name="textarea" placeholder="Tienes problemas con la pagina, o quieres escribirme algo?"></textarea>
-				<input type="text" placeholder="Nombre" required class="input" />
-				<input type="email" placeholder="Correo" required class="input email" />
-				<input type="submit" class="button" />
+				<input type="text" name="nombre" id="nombre" placeholder="Nombre" required class="input" />
+				<input type="email" name="email" id="email" placeholder="Correo" required class="input email" />
+				<input type="text" name="asunto" id="asunto" placeholder="Asunto" required class="input asunto" />
+				<input type="submit" name="mensaje" id="mensaje" class="button" />
 			</form>
 		</div>
 		<figure class="robot">
