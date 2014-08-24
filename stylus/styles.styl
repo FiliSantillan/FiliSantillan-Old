@@ -351,6 +351,12 @@ figure
 #globo_robot
 	display none
 
+.img_despedida
+	img
+		width 15em
+		border-radius 50%
+		border 4px solid white
+
 @media screen and (min-width:668px)
 	.avatar_tablet
 		z-index 2
@@ -479,16 +485,10 @@ figure
 			margin-top 2em
 			float left
 
-			img
-				width 15em
-
 		.contacto_icons
 			font-size 3em
 			float left
 			margin 2.5em 0 0 0.5em
-
-			.mail
-				display none
 
 		#globo
 			display none
@@ -514,6 +514,7 @@ figure
 		.info_footer
 			float left
 			text-align left
+			margin-top 1.5em
 
 			.fili
 				float left
@@ -526,20 +527,29 @@ figure
 			text-align left
 			top 2em
 			display inline-block
+			margin 0
 			img
 				border-radius 50%
-				width 7em
-				height 7em
+				width 8em
+				height 8em
 				float left
-				margin-top 1em
+				margin-top 1.5em
 				border 3px solid white
 
 				&:nth-child(1)
-					margin 1em 2em 0 3em
+					margin 1.5em 2em 0 4em
+
 
 		.social_me
 			float right
-			margin-top 1em
+			margin-top 0
+			padding 1em
+				span
+					display none
+
+		.fb-follow
+			display inline-block
+			margin-top 0
 
 @media screen and (min-width:1100px)
 	.header
@@ -752,12 +762,14 @@ figure
 
 		.contacto_icons
 			position absolute
-			bottom 0em
-			left 2em
+			bottom 200px
+			font-size 4em
+			left 0.3em
 
 			a
 				color white
 				margin-right 0.5em
+				text-shadow 1px 1px 10px rgba(black,0.5)
 
 		.robot
 			display block
@@ -819,6 +831,29 @@ figure
 				border 3px solid 
 				float left
 				margin-left 43%
+
+	.footer
+		.social_me
+			margin-top 0.5em
+			padding 0
+			background amarillo_bonito
+			border-radius 10px
+			box-shadow 2px 2px 10px black
+
+			span
+				text-align center
+				margin-bottom 0.50em
+				font-size 1.3em
+				display block
+
+			.fb-follow
+				top 0.6em
+				margin-right 3em
+
+			.twitter_share
+				display inline-block
+				margin-right 1em
+				
 
 
 
