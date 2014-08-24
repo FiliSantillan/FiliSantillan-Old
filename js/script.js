@@ -10,10 +10,6 @@ $(document).ready(function(){
 		$('.opc').slideToggle();
 		return false;
 	});
-	$(".mail").click(function () {
-		$('.correo').slideToggle();
-		return false;
-	});
 	$(function(){
 	//clic en un enlace de la lista
 	$('.list li a').on('click',function(e){
