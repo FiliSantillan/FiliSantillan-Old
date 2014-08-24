@@ -212,11 +212,6 @@ figure
 	img
 		width 8em
 
-/* JS */
-.MainMenu-scrolled
-	background rgba(black,0.6)
-
-
 .contacto
 	background amarillo_bonito
 	padding 1em
@@ -229,6 +224,7 @@ figure
 		
 		color gris_claro
 		margin-right 0.3em
+		transition 0.3s
 
 	.facebook-down:hover
 		color facebook
@@ -263,6 +259,9 @@ figure
 		border-color azul_bonito transparent
 		bottom -0.6em
 		left 4.5em
+
+#globotwo
+	display none
 
 .correo
 	display none
@@ -345,7 +344,13 @@ figure
 
 .link_leng
 	display none
-	
+
+.robot
+	display none
+
+#globo_robot
+	display none
+
 @media screen and (min-width:668px)
 	.avatar_tablet
 		z-index 2
@@ -639,6 +644,28 @@ figure
 					&:hover
 						opacity 1
 
+	#globotwo
+		padding 0.8em
+		border-radius 5px
+		background azul_bonito
+		position absolute
+		display inline-block
+		top 9.8em
+		right 15.2em
+		font-size 1.2em
+		color white
+		opacity 0.8
+		
+
+		&:before
+			content ""
+			width 0
+			position absolute
+			border-style solid
+			border-width: 0 5px 10px 5px;
+			border-color azul_bonito transparent
+			top: -10px;
+
 	.sobre_mi
 		padding 3em 10em
 		background rosa_bonito
@@ -655,16 +682,16 @@ figure
 
 			.name
 				font-size 2.5em
-				color gris_oscuro
+				color white
 
 			.descripcion
 				font-size 1.3em
 
 				a
-					color rosa_bonito
+					color white
 
 					&:hover 
-						color azul_claro
+						color rosa_bonito
 
 	.formacion
 		padding 0 4em 3em 4em
@@ -713,6 +740,88 @@ figure
 
 			.varela
 				font-family: 'Varela Round', sans-serif;
+
+	.contacto
+		background url(../img/contacto/fondo.jpg) no-repeat center center fixed
+		background-size cover
+		padding 1em
+		height 500px
+		strong
+		.img_despedida
+			display none
+
+		.contacto_icons
+			position absolute
+			bottom 0.5em
+			left 4em
+
+			a
+				color white
+				margin-right 0.5em
+
+		.robot
+			display block
+			position absolute
+			bottom -10em
+			right 0
+			img
+				width 35em
+
+	#globo_robot
+		padding 2.5em 0.5em
+		border-radius 50%
+		background youtube
+		position absolute
+		display inline-block
+		right 12em
+		top 0.1em
+		font-size 2em
+		color white
+
+		&:before
+			content ""
+			width 0
+			position absolute
+			border-style solid
+			border-width 0px 10px 60px 70px
+			border-color youtube transparent
+			top 3.7em
+			right 0.1em
+
+	.correo
+		display block
+		text-align center
+
+		.form
+			padding 1em 0 0 1em
+			margin 0 auto
+			display block
+			left 0
+			right 0
+
+			textarea
+				width 90%
+				height 11em
+				margin-bottom 1em
+				border 5px solid azul_bonito
+
+				&:hover
+					border 5px solid rosa_bonito
+
+			input
+				border 5px solid azul_bonito
+
+				&:hover
+					border 5px solid rosa_bonito
+
+			.button
+				background azul_bonito
+				border 5px solid 
+				float left
+				margin-left 40%
+
+
+
 
 
 
