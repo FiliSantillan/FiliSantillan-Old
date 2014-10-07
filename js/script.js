@@ -6,10 +6,12 @@ $(document).ready(function(){
 	}, function(){
 		$(target[0].firstElementChild).fadeOut(300);
 	});
+
 	$(".menu").click(function () {
 		$('.opc').slideToggle();
 		return false;
 	});
+	
 	$(function(){
 	//clic en un enlace de la lista
 	$('.list li a').on('click',function(e){
