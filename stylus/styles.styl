@@ -2,861 +2,135 @@
 @import 'fonts.styl'
 @import 'nib/vendor'
 
-azul_bonito = #4799EA
-gris_oscuro = #1D1D19
-gris_claro = #333
-rosa_bonito = #EC2849
-azul_claro = #0D61B3
-amarillo_bonito = #FEAC09
-facebook = #3b5998
-twitter = #1dcaff
-google = #d34836
-verde_raro = #3FA0A9
-youtube = #d50e1d
-
-a
-	text-decoration none
+azul = #1dcaff
+fondo = #131314
+amarillo = #fad542
 
 body
-	font-family: 'Varela Round', sans-serif;
-
-header
-	background rgba(black,0.8)
-	position fixed
-	top 0
-	width 100%
-	z-index 1000
-	border-bottom 3px solid white
-
+	background fondo
+	margin 0
 h1
-	font-size 2.1em
-	margin 0
-	color white
-	line-height 2.7em
-	font-family: 'Cherry Swash', cursive;
-
-	strong
-		color azul_bonito
-		border-left 2px solid azul_bonito
-		padding-left 0.2em
-
-.despedida
 	font-size 2em
-	color gris_claro
-
-figure
-	margin 0
-
-.menu
-	right 0.3em
-	position absolute
-	font-size 2.5em
-	color white
-	top 0.6em
-
-	&:hover
-		color azul_bonito
-
-.center-block
-	margin 0 auto 
-
-.center-text
-	text-align center
-
-.opc
-	z-index 10
-	display none
-	ul
-		list-style none
-		padding 0
-		li
-			a
-				color azul_bonito
-				font-size 1.2em
-				text-decoration none
-				display block
-				padding 1em
-				border 2px solid transparent
-				border-radius 5px
-			a:hover
-				border 2px solid azul_bonito
-				border-radius 5px
-				color white
-.left
-	float left
-
-.right
-	float right
-
-.bienvenida
-	margin-top 5.6em
-	background rosa_bonito
-
-	.saludo
-		font-size 2em
-		color gris_oscuro
-		display block
-		margin-bottom 0.5em
-		color white
-
-	.descripcion
-		color white
-
-.avatar
-	img
-		width 10em
-		border-radius 50%
-
-.elements_bienvenida
-	padding 1em
-
-.sobre_mi
-	padding 1em
-	background rosa_bonito
-	color gris_oscuro
-
-.icons_mi
-	font-size 1.5em
-
-	.text
-		font-family: 'Varela Round', sans-serif;
-
-.image
-	display inline-block
-
-	img
-		width 10em
-		border-radius 50%
-		z-index: -1;
-
-.img_desc
-	a
-		display none
-
-.inspiraciones
-	padding 1em
-	background azul_claro
-	text-align center
-
-	.elements_inspiraciones
-		position relative
-		margin 2.5em 0
-
-		.name
-			font-size 1.5em
-			display block
-			margin-bottom 0.5em
-			color white
-
-		.descripcion
-			color gris_oscuro
-			a
-				color white
-
-			a:hover
-				color rosa_bonito
-
-.imagetwo
-	margin-top 1.5em
+	font-family: 'Lobster Two', cursive;
+	margin-bottom 0.5em
+	color azul
 	
-	img
-		width 12em
-
-.formacion
-	padding 1em
-	background gris_claro
+p
+	font-size 1em
+	margin-top 0.1em
+	font-family: 'Lato', sans-serif;
 	color white
-
-	.name
+	
+	strong
+		color azul
 		font-size 1.5em
-		display block
-		margin-bottom 0.5em
-		text-transform uppercase
-
-	.descripcion
-		a
-			color white
-
-		a:hover
-			color rosa_bonito
-
-.elements_formacion:nth-child(4)
-	border-bottom 5px solid azul_bonito
-	padding-bottom 1em
-
-.elements_formacion
-	.dominio
-		display block
-		margin-bottom 0.5em
-		font-size 1.4em
-		color amarillo_bonito
-
-	.name
-		display block
-
-	.descripcion_pronto
-		padding 0.5em
-		background azul_bonito
-		border-radius 6px
-		border 1px solid black
-
-.lenguajes
-	margin-bottom 5em
-
-.lenguaje
-	margin-top 1.5em
 	
-	img
-		width 8em
+a
+	text-decoration none
+	color white
+	font-size 1.2em
+	margin-right 0.5em
+	
+	&:hover
+		color amarillo
+.social
+	margin-top 1em
+	
+.centrar
+	position absolute
+	left 50%
+	top 50%
+	transform translate(-50%, -50%)
+	text-align center
+	
+.tubo
+	display block
+	width 30px
+	height 150px
+	background-color #f5f4f0
+	margin 50px auto auto auto
+	border #e5e4e0 solid 5px
+	border-top-color #f5f4f0
+	border-radius 0 0 45px 45px
+	background linear-gradient(to top, rgba(255, 255, 255, 0) 80%, #e5e4e0 81%), 0 50%, linear-gradient(to top, rgba(255, 255, 255, 0) 0%, #46be86 0%), #f5f4f0
+	background-size 10px 10px, 200px 200px, 200px 200px, 100% 366.66667px, 100% 100%
+	background-position 0 0, -11.11111px 138.88889px, -100px 27.77778px, bottom, 0 0
+	background-repeat repeat-y, no-repeat, no-repeat, no-repeat, no-repeat
+	transform-origin 50% 30%
+	position relative
+	animation agitation 0.5s ease-in-out infinite
 
-.contacto
-	background amarillo_bonito
-	padding 1em
+	.burbujas
+		position absolute
+		bottom 22.5px
+		left 3px
+		z-index 1
+		width 50px
+		height 50px
+		background radial-gradient(center, ellipse cover, #f5f4f0 0%, #f5f4f0 50%, rgba(255, 255, 255, 0) 50%), radial-gradient(center, ellipse cover, #f5f4f0 0%, #f5f4f0 50%, rgba(255, 255, 255, 0) 50%), radial-gradient(center, ellipse cover, #f5f4f0 0%, #f5f4f0 50%, rgba(255, 255, 255, 0) 50%)
+		background-size 0 0
+		background-position 80% 100%, center 95%, 110% 70%
+		background-repeat no-repeat
 
-.contacto_icons
-	font-size 2.2em
-	margin-top 0.5em
+@keyframes agitation
+	0%
+		transform: rotate(6deg)
+ 
+	50% 
+		transform: rotate(-6deg)
+  
+	100% 
+		transform: rotate(6deg)
+  
+@media screen and (min-width 769px)
+	h1
+		font-size 3em
+		
+	p
+		font-size 1.5em
+		
+		strong
+			font-size 1.8em
+		
+	a
+		font-size 2em
+		
+	.tubo
+		width 30px
+		height 200px
+		
+@media screen and (min-width 1080px)
+	h1
+		font-size 4em
+		
+	p
+		font-size 1.8em
+		
+		strong
+			font-size 2em
+			
 
 	a
+		font-size 3em
 		
-		color gris_claro
-		margin-right 0.3em
-		transition 0.3s
-
-	.facebook-down:hover
-		color facebook
-
-	.twitter-down:hover
-		color twitter
-
-	.googleplus:hover
-		color google
-
-	.github:hover
-		color black
-
-	.mail:hover
-		color azul_claro
-
-#globo
-	padding 0.5em
-	border-radius 5px
-	box-shadow 0 2px 5px #555
-	background azul_bonito
-	position relative
-	display inline-block
-	margin-left 9.5em
-
-	&:before
-		content ""
-		width 0
-		position absolute
-		border-style solid
-		border-width 10px 5px 0 5px
-		border-color azul_bonito transparent
-		bottom -0.6em
-		left 4.5em
-
-#globotwo
-	display none
-
-.correo
-	display none
-
-.form
-	input
-		display block
-		margin 0 auto
-		margin-bottom 0.5em
-		padding 0.5em
-		border-radius 5px
-		border 3px solid azul_bonito
-
-	textarea
-		width 17em
-		height 10em
-		margin 0 auto
-		border-radius 5px
-		border 3px solid azul_bonito
-		padding 0.5em
-
-	input:hover
-	textarea:hover
-		border 3px solid rosa_bonito
-
-	.button
-		background azul_bonito
-		color white
-
-
-.footer
-	background verde_raro
-	padding 1em
-	margin 0
-
-	strong
-		display block
-		font-size 1.2em
-		&:before
-			content "-"
-			margin-right 0.2em
-
-		&:after
-			content "-"
-			margin-left 0.2em
-	span
-		display block
-
-		a
-			color white
-			&:before
-				content "'"
-				margin-left 0.3em
-			&:after
-				content "'"
-			&:hover
-				color rosa_bonito
-
-	span
-	strong
-		margin 1em 0
-
-.img_person
-	display none
-
-.fondo_tablet
-	display none
-
-.down
-	display none
-
-.redes_sociales
-	display none
-
-.image_fb
-	display none
-
-.links
-	display none
-
-.link_leng
-	display none
-
-.robot
-	display none
-
-#globo_robot
-	display none
-
-.img_despedida
-	img
-		width 15em
-		border-radius 50%
-		border 4px solid white
-
-@media screen and (min-width:668px)
-	.avatar_tablet
-		z-index 2
-		position relative
-		top 4em
-		img
-			border 2px solid white
-			box-shadow 2px 0 10px black
-
-	.elements_bienvenida
-		.saludo
-		.descripcion
-			margin-top 7.5em
-
-	.fondo_tablet
-		display block
-		top 5.6em
-		left 0
-		position absolute
-		z-index 1
-		img
-			width 100%
-			height 25em	
-
-	.sobre_mi
-		overflow hidden
-		padding 2em
-
-		.columna1
-			float left
-
-		.columna2
-			float right
-
-	.inspiraciones
-		padding 3em
-
-		.elements_inspiraciones
-			position relative
-			border-bottom 3px solid black
-
-			&:nth-child(odd)
-				text-align left
-
-			&:nth-child(even)
-				text-align right
-
-			&:nth-child(6)
-				border-bottom 3px solid transparent
-				margin-bottom -5em
-
-			.info
-				position absolute
-				width 75%
-				top 1.5em
-				padding-bottom 1em
-
-			.par
-				left 11.5em
-
-			.inpar
-				right 11.5em
-	.image
-		display inline-block
-		margin-bottom 5em
-		border 3px solid white
-		border-radius 50%
-		height 10em
-
-	.formacion
-		overflow hidden
-
-	.elements_formacion
-		width 47%
-		margin-top 5em
-		height 350px
-
-		&:nth-child(4)
-			border-bottom 5px solid transparent
-			padding-bottom 0
+	.tubo
+		width 60px
+		height 220px
 		
-		&:nth-child(odd)
-			float left
-
-		&:nth-child(even)
-			float right
-			margin-right 3%
-
-	.lenguajes
-		height 200px
-		margin-bottom 0
-
-		.lenguaje
-			float left
-			margin 0 1em 5em 0
-
-		.info_lenguajes
-			text-align left
-
-			.name
-				display inline-block
-
-			.dominio
-				display inline-block
-				margin-left 0.5em
-
-			.prox
-				display block
-
-			.descripcion
-				display block
-
-	.contacto
-		text-align left
-		overflow hidden
-		padding 3em
-		position relative
-		
-		.despedida
-			position absolute
-			top 3em
-			left 10em
-
-		.img_despedida
-			display inline-block
-			margin-top 2em
-			float left
-
-		.contacto_icons
-			font-size 3em
-			float left
-			margin 2.5em 0 0 0.5em
-
-		#globo
-			display none
-
-	.correo
-		display block
-
-		.form
-			float left
-			padding 1em 0 0 1em
-
-			textarea
-				float left
-				margin-right 0.5em
-				width 15em
-				height 10.5em
-
-			.button
-				float left
-	.footer
-		overflow hidden
-
-		.info_footer
-			float left
-			text-align left
-			margin-top 1.5em
-
-			.fili
-				float left
-
-			.memo
-				float left
-
-		.img_person
-			float left
-			text-align left
-			top 2em
-			display inline-block
-			margin 0
-			img
-				border-radius 50%
-				width 8em
-				height 8em
-				float left
-				margin-top 1.5em
-				border 3px solid white
-
-				&:nth-child(1)
-					margin 1.5em 2em 0 4em
-
-
-		.social_me
-			float right
-			margin-top 0
-			padding 1em
-				span
-					display none
-
-		.fb-follow
-			display inline-block
-			margin-top 0
-
-@media screen and (min-width:1100px)
-	.header
-		.opc
-			display block
-			float right
-			margin-right 1em
-			li
-				display inline-block
-		.menu
-			display none
-
-	h1
-		float left
-		margin-left 1em
-
-	.img_desc
-		width 10em
-		height 10em
-		position absolute
-		z-index 2
-		border-radius 50%
-		background rgba(black,0.7)
-		display none
-
-		a
-			color white
-			font-size 2em
-			line-height 5em
-			display inline-block
-
-			&:nth-child(1)
-				margin-left 1.5em
-				margin-right 0.5em
-
-			&:hover
-				color rosa_bonito
-
-			&:nth-child(2)
-				margin-right 1.3em
-
-	.fondo_tablet
-		display none
-
-	.bienvenida
-		background url(../img/yo/fondo_desktop.jpg) no-repeat center center fixed
-		background-size cover
-		margin-top 0
-		height 900px
-
-		.elements_bienvenida
-			padding 5em 12em
-
-			.saludo
-				font-size 4em
-				margin-top 2em
-
-			.descripcion
-				display block
-				margin-top 0
-
-			.down
-				margin-top 1em
-				display inline-block
-				padding 1em
-				border 10px solid white
-				border-radius 50%
-				opacity 0.5
-				transition 0.3s
-
-				.flechita
-					color white
-					font-size 2em
-
-				&:hover
-					opacity 1
-
-	.avatar_desktop
-		z-index 2
-		position relative
-		top 5em
-
-	.redes_sociales
-		display block
-		position absolute
-		right 3em
-		top 6.5em
-
-		.social
-			list-style none
-			.item_social
-				display inline-block
-				border-radius 50%
-				border 3px solid transparent
-				padding 0.5em
-				a
-					color white
-					font-size 2.5em
-					opacity 0.5
-					transition 0.3s
-
-					&:hover
-						opacity 1
-
-	#globotwo
-		padding 0.8em
-		border-radius 5px
-		background azul_bonito
-		position absolute
-		display inline-block
-		top 9.8em
-		right 12.2em
-		font-size 1.2em
-		color white
-		opacity 0.8
-		
-
-		&:before
-			content ""
-			width 0
-			position absolute
-			border-style solid
-			border-width: 0 5px 10px 5px;
-			border-color azul_bonito transparent
-			top: -10px;
-
-	.sobre_mi
-		padding 3em 10em
-		background rosa_bonito
-		color gris_oscuro
-
-	.inspiraciones
-		background url(../img/inspiraciones/fondo.jpg) no-repeat center center fixed
-		background-size cover
-		padding 3em 5em
-
-		.elements_inspiraciones
-			position relative
-			margin 2.5em 0
-
-			.name
-				font-size 2.5em
-				color white
-
-			.descripcion
-				font-size 1.3em
-
-				a
-					color white
-
-					&:hover 
-						color rosa_bonito
-
-	.formacion
-		padding 0 4em 3em 4em
-
-		.elements_formacion
-			position relative
-			margin-top 8em
-	.links
-		display block
-		font-size 2.5em
-		position absolute
-		left 0
-		right 0
-		margin 0 auto
-		bottom -2.1em
-
-		a
-			color white
-			padding 0.5em
-			background azul_claro
-
-		.link:hover
-			background amarillo_bonito
-				
-		.youtube:hover
-			background youtube
-
-	.link_leng
-		font-size 1.2em
-		position absolute
-		bottom 1em
-		left 7.5em
-		display block
-
-		a
-			color black
-			padding 0.7em
-			background amarillo_bonito
-
-			&:nth-child(1)
-				margin-right 0.5em
-
-			&:hover
-				background youtube
-				color white
-
-			.varela
-				font-family: 'Varela Round', sans-serif;
-
-	.contacto
-		background url(../img/contacto/fondo.jpg) no-repeat center center fixed
-		background-size cover
-		padding 1em
-		height 500px
-		strong
-		.img_despedida
-			display none
-
-		.contacto_icons
-			position absolute
-			bottom 200px
-			font-size 4em
-			left 0.3em
-
-			a
-				color white
-				margin-right 0.5em
-				text-shadow 1px 1px 10px rgba(black,0.5)
-
-		.robot
-			display block
-			position absolute
-			bottom -10em
-			right 0
-			img
-				width 35em
-
-	#globo_robot
-		padding 2.5em 0.5em
-		border-radius 50%
-		background youtube
-		position absolute
-		display inline-block
-		right 12em
-		top 0.1em
-		font-size 2em
-		color white
-
-		&:before
-			content ""
-			width 0
-			position absolute
-			border-style solid
-			border-width 0px 10px 60px 70px
-			border-color youtube transparent
-			top 3.7em
-			right 0.1em
-
-	.correo
-		display block
-		text-align center
-
-		.form
-			padding 1em 0 0 1em
-			margin 0 auto
-			display block
-			left 0
-			right 0
-
-			textarea
-				width 90%
-				height 11em
-				margin-bottom 1em
-				border 3px solid azul_bonito
-
-				&:hover
-					border 3px solid rosa_bonito
-
-			input
-				border 3px solid azul_bonito
-
-				&:hover
-					border 3px solid rosa_bonito
-
-			.button
-				background azul_bonito
-				border 3px solid 
-				float left
-				margin-left 43%
-
-	.footer
-		.social_me
-			margin-top 0.5em
-			padding 0
-			background amarillo_bonito
-			border-radius 10px
-			box-shadow 2px 2px 10px black
-
-			span
-				text-align center
-				margin-bottom 0.50em
-				font-size 1.3em
-				display block
-
-			.fb-follow
-				top 0.6em
-				margin-right 3em
-
-			.twitter_share
-				display inline-block
-				margin-right 1em
-				
-	.descripcion_init
-		font-size 2em
+		.burbujas
+			animation ascension 3s ease-in-out infinite
 				
 
+	@keyframes ascension 
+		0% 
+			bottom 22.5px
+			background-size 10px 10px,  10px 10px, 10px 10px
+			background-position center 100%, center 100%, center 100%
 
-
+		100% 
+			bottom 230.66667px
+			background-size 10px 10px,  20px 20px, 30px 30px
+			background-position 80% 100%, center 50%, 110% 0%
 
 
 
