@@ -9,6 +9,7 @@ amarillo = #fad542
 body
 	background fondo
 	margin 0
+	position relative
 h1
 	font-size 2em
 	font-family: 'Lobster Two', cursive;
@@ -33,15 +34,17 @@ a
 	
 	&:hover
 		color amarillo
-.social
-	margin-top 1em
+
 	
 .centrar
 	position absolute
 	left 50%
-	top 50%
+	top 14.5em
 	transform translate(-50%, -50%)
 	text-align center
+	
+.social
+	margin-top 1em
 	
 .tubo
 	display block
@@ -98,6 +101,9 @@ a
 	.tubo
 		width 30px
 		height 200px
+		
+	.centrar
+		top 50%
 		
 @media screen and (min-width 1080px)
 	h1
