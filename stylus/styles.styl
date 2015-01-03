@@ -1,142 +1,81 @@
 @import 'normalize.styl'
 @import 'fonts.styl'
-@import 'nib/vendor'
 
 azul = #1dcaff
 fondo = #131314
 amarillo = #fad542
 
-body
-	background fondo
+header
+	display none
+	
+figure
 	margin 0
-	position relative
-h1
-	font-size 2em
-	font-family: 'Lobster Two', cursive;
-	margin-bottom 0.5em
-	color azul
-	
-p
-	font-size 1em
-	margin-top 0.1em
-	font-family: 'Lato', sans-serif;
-	color white
-	
-	strong
-		color azul
-		font-size 1.5em
-	
-a
-	text-decoration none
-	color white
-	font-size 1.2em
-	margin-right 0.5em
-	
-	&:hover
-		color amarillo
 
-	
-.centrar
-	position absolute
-	left 50%
-	top 14.5em
-	transform translate(-50%, -50%)
+.cover
+	background url(../img/cover.png)
+	background-repeat no-repeat
+	background-position center
+	height 500px
 	text-align center
 	
-.social
-	margin-top 1em
-	
-.tubo
-	display block
-	width 30px
-	height 150px
-	background-color #f5f4f0
-	margin 50px auto auto auto
-	border #e5e4e0 solid 5px
-	border-top-color #f5f4f0
-	border-radius 0 0 45px 45px
-	background linear-gradient(to top, rgba(255, 255, 255, 0) 80%, #e5e4e0 81%), 0 50%, linear-gradient(to top, rgba(255, 255, 255, 0) 0%, #46be86 0%), #f5f4f0
-	background-size 10px 10px, 200px 200px, 200px 200px, 100% 366.66667px, 100% 100%
-	background-position 0 0, -11.11111px 138.88889px, -100px 27.77778px, bottom, 0 0
-	background-repeat repeat-y, no-repeat, no-repeat, no-repeat, no-repeat
-	transform-origin 50% 30%
-	position relative
-	animation agitation 0.5s ease-in-out infinite
-
-	.burbujas
-		position absolute
-		bottom 22.5px
-		left 3px
-		z-index 1
-		width 50px
-		height 50px
-		background radial-gradient(center, ellipse cover, #f5f4f0 0%, #f5f4f0 50%, rgba(255, 255, 255, 0) 50%), radial-gradient(center, ellipse cover, #f5f4f0 0%, #f5f4f0 50%, rgba(255, 255, 255, 0) 50%), radial-gradient(center, ellipse cover, #f5f4f0 0%, #f5f4f0 50%, rgba(255, 255, 255, 0) 50%)
-		background-size 0 0
-		background-position 80% 100%, center 95%, 110% 70%
-		background-repeat no-repeat
-
-@keyframes agitation
-	0%
-		transform: rotate(6deg)
- 
-	50% 
-		transform: rotate(-6deg)
-  
-	100% 
-		transform: rotate(6deg)
-  
-@media screen and (min-width 769px)
+	.fili
+		img
+			margin-top 1em
+			border-radius 50%
+			width 250px
+			border 5px solid #5c7dac
+.quote
+	font-size 1.5em
+	strong
+		font-family 'Roboto' sans-serif
+		
+.about
 	h1
+		font-family: 'Lobster Two', cursive;
+		text-align center
 		font-size 3em
 		
-	p
-		font-size 1.5em
+@media screen and (min-width: 767px)
+	.wrap
+		overflow hidden
+		padding 1em
 		
-		strong
-			font-size 1.8em
-		
-	a
-		font-size 2em
-		
-	.tubo
-		width 30px
-		height 200px
-		
-	.centrar
-		top 50%
-		
-@media screen and (min-width 1080px)
-	h1
-		font-size 4em
-		
-	p
-		font-size 1.8em
-		
-		strong
-			font-size 2em
+		.fili
+			float left
 			
-
-	a
-		font-size 3em
+	.quote
+		font-size 2.8em
+			
+@media screen and (min-width: 1080px)
+	header
+		display block
+		font-family 'Roboto' sans-serif
 		
-	.tubo
-		width 60px
-		height 220px
+	.wrap
+		max-width 1080px
+		margin 0 auto
+		padding-top 4em
 		
-		.burbujas
-			animation ascension 3s ease-in-out infinite
+	.quote
+		font-size 3.5em
+		
+	.menu
+		text-align center
+		
+	.list
+		list-style none
+		margin 0
+		.item
+			display inline-block
+			
+			a
+				padding 0.5em
+				font-size 1.5em
 				
-
-	@keyframes ascension 
-		0% 
-			bottom 22.5px
-			background-size 10px 10px,  10px 10px, 10px 10px
-			background-position center 100%, center 100%, center 100%
-
-		100% 
-			bottom 230.66667px
-			background-size 10px 10px,  20px 20px, 30px 30px
-			background-position 80% 100%, center 50%, 110% 0%
-
+	.img_header
+		img
+			width 60px
+				
+				
 
 
