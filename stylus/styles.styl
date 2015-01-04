@@ -4,12 +4,23 @@
 azul = #1dcaff
 fondo = #131314
 amarillo = #fad542
+verde = #44a468
+fondo-claro = #353236
+
+body
+	background fondo-claro
 
 header
 	display none
 	
 figure
 	margin 0
+	
+a
+	text-decoration none
+
+body
+	font-family 'Roboto' sans-serif
 
 .cover
 	background url(../img/cover.png)
@@ -23,38 +34,86 @@ figure
 			margin-top 1em
 			border-radius 50%
 			width 250px
-			border 5px solid #5c7dac
+			border 5px solid verde
 .quote
-	font-size 1.5em
+	font-size 1.8em
+	color verde
+	text-shadow 4px 4px 5px black
+	
 	strong
 		font-family 'Roboto' sans-serif
 		
 .about
+	text-align center
+	padding 1em
 	h1
-		font-family: 'Lobster Two', cursive;
-		text-align center
+		font-family 'Lobster Two' cursive
+		color verde
 		font-size 3em
+		
+	p
+		strong
+			&:before
+				content '-'
+			&:after
+				content '-'
+.menu-list
+	background rgba(black,0.2)
+	border none
+	position fixed
+	font-size 2em
+	top 0.5em
+	left 0.5em
+	color white
+	
+.art_me
+	text-align center
+	padding 1em
+	.art
+		padding 1em		
+		strong
+			font-size 1.4em
+			color verde
 		
 @media screen and (min-width: 767px)
 	.wrap
 		overflow hidden
 		padding 1em
 		
+	.padding-top
+		padding-top 6em
+		
 		.fili
 			float left
 			
 	.quote
 		font-size 2.8em
+		
+	.about
+		h1
+			font-size 4em
+		p
+			font-size 1.2em
+			
+	.art
+		width 48%
+		display inline-block
+		vertical-align top
+		&:nth-child(odd)
+			margin-right 2%
 			
 @media screen and (min-width: 1080px)
 	header
 		display block
-		font-family 'Roboto' sans-serif
+		background fondo
+		border-bottom 2px solid white
 		
 	.wrap
 		max-width 1080px
 		margin 0 auto
-		padding-top 4em
+		
+	.padding-top
+		padding-top 5em
 		
 	.quote
 		font-size 3.5em
@@ -70,12 +129,32 @@ figure
 			
 			a
 				padding 0.5em
+				color azul
 				font-size 1.5em
 				
+				&:hover
+					color verde
 	.img_header
 		img
 			width 60px
+			
+	.menu-list
+		display none
 				
+
+	.about
+		h1
+			font-size 5em
+			
+		p
+			font-size 1.5em
+			
+	.art
+		width 31.333333333%
+		display inline-block
+		vertical-align top
+		&:nth-child(odd)
+			margin-right 2%
 				
 
 
