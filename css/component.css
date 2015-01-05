@@ -100,17 +100,8 @@ body,
 	list-style: none;
 }
 
-.st-menu figure{
-	text-align: center;
-	margin: 0;
-	padding: 1em;
-}
-.st-menu figure img{
-	width: 100px;
-	border-radius: 7px;
-	border: 3px solid rgba(0,0,0,0.4);
-}
 .st-menu h2 {
+	padding: 0.5em;
 	margin: 0;
 	color: rgba(0,0,0,0.4);
 	text-shadow: 0 0 1px rgba(0,0,0,0.1);

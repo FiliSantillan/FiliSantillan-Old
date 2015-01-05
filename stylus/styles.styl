@@ -2,16 +2,19 @@
 @import 'fonts.styl'
 
 azul = #1dcaff
+azul_fuerte = #1479c9
 fondo = #131314
 amarillo = #fad542
 verde = #44a468
 fondo-claro = #353236
+gris_oscuro = #2e363f
 
 body
 	background fondo-claro
 
 header
 	display none
+	text-transform uppercase
 	
 figure
 	margin 0
@@ -69,11 +72,75 @@ body
 .art_me
 	text-align center
 	padding 1em
+	background gris_oscuro
 	.art
 		padding 1em		
 		strong
 			font-size 1.4em
 			color verde
+			
+		p
+			color white
+			
+
+.projects
+	background #f0675c
+	padding 1em
+	text-align center
+	h3
+		font-size 2em
+		color white
+		margin 0.1em
+	strong
+		color white
+		margin-bottom 0.5em
+		font-size 1.5em
+		
+	.icons_projects
+		span
+			color white
+			font-size 2em
+			margin-right 0.5em
+			
+.projects_items
+	padding 1em
+			
+.title_project
+	text-align center
+	margin-top 1em
+	.f_project
+		display none
+			
+	.text_project
+		font-size 1.2em
+		margin-top 0.5em
+		strong
+			padding-right 1.2em
+			border-right 2px solid black
+			
+		span
+			padding-left 0.4em
+			
+.presentations
+	background azul_fuerte
+	text-align center
+	padding 1em
+	.buttons
+		padding 1em
+		a
+			padding 1.5em
+			border 4px solid white
+			color white
+			display block
+			font-size 1.3em
+			transition 0.3s
+			margin-bottom 0.7em
+			
+			&:hover
+				background white
+				color azul_fuerte
+				border 4px solid gris_oscuro
+
 		
 @media screen and (min-width: 767px)
 	.wrap
@@ -92,9 +159,9 @@ body
 	.about
 		h1
 			font-size 4em
-		p
-			font-size 1.2em
 			
+		p
+			text-align left
 	.art
 		width 48%
 		display inline-block
@@ -102,6 +169,49 @@ body
 		&:nth-child(odd)
 			margin-right 2%
 			
+	.projects
+		text-align right
+		h3
+			font-size 3em
+		
+		strong
+			font-size 2em
+			
+		.icons_projects
+			span
+				font-size 2.3em
+				
+	.title_project
+		margin 0 auto
+		text-align start
+		width 398px
+		position relative
+		.f_project
+			display inline-block
+			margin-right 0.5em
+			img
+				width 60px
+							
+		.text_project
+			display inline-block
+			position absolute
+			top 0.6em
+			font-size 1.5em
+			margin-top 0
+			
+			strong
+				padding-right 0.5em
+			span
+				padding-left 0
+				
+	.presentations
+		.buttons
+			a
+				width 48%
+				display inline-block
+				&:nth-child(odd)
+					margin-right 2%
+										
 @media screen and (min-width: 1080px)
 	header
 		display block
@@ -147,14 +257,34 @@ body
 			font-size 5em
 			
 		p
-			font-size 1.5em
+			font-size 1.3em
 			
 	.art
 		width 31.333333333%
-		display inline-block
 		vertical-align top
-		&:nth-child(odd)
-			margin-right 2%
+		margin-right 0 !important
+			
+			
+	.projects
+		h3
+			font-size 4em
+			
+		strong
+			font-size 3em
+			
+		p
+			font-size 1.3em
+			
+		.icons_projects
+			span
+				font-size 2.5em
+				
+	.presentations
+		.buttons
+			a
+				font-size 1.5em
+
+		
 				
 
 
