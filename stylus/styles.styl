@@ -1,5 +1,6 @@
 @import 'normalize.styl'
 @import 'fonts.styl'
+@import 'nib/vendor'
 
 azul = #1dcaff
 azul_fuerte = #1479c9
@@ -8,6 +9,8 @@ amarillo = #fad542
 verde = #44a468
 fondo-claro = #353236
 gris_oscuro = #2e363f
+rosita = #e83f66
+naranja = #ec5358
 
 body
 	background fondo-claro
@@ -84,7 +87,7 @@ body
 			
 
 .projects
-	background #f0675c
+	background naranja
 	padding 1em
 	text-align center
 	h3
@@ -135,13 +138,133 @@ body
 			font-size 1.3em
 			transition 0.3s
 			margin-bottom 0.7em
-			
 			&:hover
 				background white
 				color azul_fuerte
 				border 4px solid gris_oscuro
+				
+.sites_title
+	text-align center
+	margin 1.5em 0
+	font-size 1.2em
+	strong
+		padding-right 1em
+		border-right 2px solid black
+	span
+		padding-left 0.4em
 
+.sites
+	padding 1em
+	background rosita
+	.content_sites
+		background verde
+		height 300px
+		overflow hidden
+		margin-bottom 1em
+		border 3px dashed white
+		.f_sites
+			height 210px
+			background gris_oscuro
+			overflow hidden
+			transition height .3s
+			img
+				width 100px
+				margin 2.5em auto
+				display block
+				transition margin-top .3s
+		.info_sites
+			height 90px
+			background azul_fuerte
+			overflow hidden
+			transition height .3s
+			
+			.title_sites
+				text-transform uppercase
+				font-size 1.5em
+				color white
+				margin 0.5em 0 0.3em 0.5em
+				
+			p
+				margin 0 0.5em
+				
+			a
+				float right
+				margin-top -2.5em
+				padding 0.7em 0.4em
+				color white
+				background gris_oscuro
+				margin-right 0.5em
+				border-radius 4px
+				
+				&:hover
+					background white
+					color gris_oscuro
+					transition .3s
+					
+.contact
+	padding 1em
+	background verde
+	text-align center
+	
+	h3
+		font-size 2em
+		color black
+		margin 0.1em
+	strong
+		color black
+		margin-bottom 0.5em
+		font-size 1.5em
 		
+	.icons_projects
+		span
+			color white
+			font-size 2em
+			margin-right 0.5em
+
+.hi-icon
+	display inline-block
+	font-size 0px
+	cursor pointer
+	margin 15px 30px
+	width 90px
+	height 90px
+	border-radius 50%
+	text-align center
+	position relative
+	z-index 1
+	color white
+	
+.hi-icon:after
+	pointer-events none
+	position absolute
+	width 100%
+	height 100%
+	border-radius 50%
+	content ''
+	box-sizing content-box
+
+.hi-icon:before
+	speak none
+	font-size 48px
+	line-height 90px
+	font-style normal
+	font-weight normal
+	font-variant normal
+	text-transform none
+	display block
+	font-smoothing antialiased
+
+.hi-icon-effect-6 .hi-icon
+	box-shadow 0 0 0 4px rgba(255,255,255,1)
+	transition background 0.3s, color 0.3s
+
+
+.hi-icon-effect-6 .hi-icon:hover
+	background white
+	color verde
+
+
+
 @media screen and (min-width: 767px)
 	.wrap
 		overflow hidden
@@ -211,7 +334,30 @@ body
 				display inline-block
 				&:nth-child(odd)
 					margin-right 2%
-										
+					
+	.sites_title
+		font-size 1.5em
+		strong
+			padding-right 0.5em
+
+		span
+			padding-left 0
+					
+	.sites
+		.content_sites
+			width 45%
+			display inline-block
+			&:nth-child(odd)
+				margin-right 9%
+				
+	.contact
+		text-align left
+		h3
+			font-size 3em
+		
+		strong
+			font-size 2em
+						
 @media screen and (min-width: 1080px)
 	header
 		display block
@@ -236,9 +382,9 @@ body
 		margin 0
 		.item
 			display inline-block
+			padding 1em
 			
 			a
-				padding 0.5em
 				color azul
 				font-size 1.5em
 				
@@ -283,6 +429,45 @@ body
 		.buttons
 			a
 				font-size 1.5em
+				
+	.sites
+		.content_sites
+			.f_sites
+				height 300px
+				img
+					margin-top 4.7em
+			.info_sites
+				height 0
+				
+			&:hover .f_sites
+				height 210px
+				
+			&:hover .info_sites
+				height 90px
+				
+			&:hover .img_sites
+				margin-top 2.5em
+	
+	.contact
+		h3
+			font-size 4em
+			
+		strong
+			font-size 3em
+			
+		p
+			font-size 1.3em
+			
+	.hi-icon-effect-6 .hi-icon:hover:before
+		animation: spinAround 1.3s linear infinite
+
+
+	@keyframes spinAround
+		from
+			transform rotate(0deg)
+		to
+			transform rotate(360deg)
+
 
 		
 				
