@@ -78,12 +78,16 @@ body
 	background gris_oscuro
 	.art
 		padding 1em		
-		strong
+		.strong_me
 			font-size 1.4em
 			color verde
 			
 		p
 			color white
+			a
+				color azul_fuerte
+				&:hover
+					text-decoration underline
 			
 
 .projects
@@ -262,7 +266,99 @@ body
 .hi-icon-effect-6 .hi-icon:hover
 	background white
 	color verde
+	
+.share
+	padding 1em
+	text-align center
+	h3
+		font-size 1.2em
+	
+.button
+	background #DCE0E0
+	position relative
+	display block
+	height 40px
+	overflow hidden
+	width 150px
+	border-radius 3px
+	margin 0 auto
+	margin-bottom 1em
 
+	.icon
+		display block
+		float left
+		position relative
+		z-index 3
+		height 100%
+		vertical-align top
+		width 38px
+		border-radius 3px 0px 0px 3px
+		text-align center
+
+
+		span
+			color #fff
+			line-height 42px
+
+
+	.slide
+		z-index 2
+		display block
+		margin 0
+		height 100%
+		left 38px
+		position absolute
+		width 112px
+		border-radius: 0px 3px 3px 0px
+		transition: all 0.2s ease-in-out;
+
+
+		p
+			font-weight 400
+			border-left 1px solid #fff
+			border-left 1px solid rgba(255,255,255,0.35)
+			color #fff
+			font-size 16px
+			left 0
+			margin 0
+			position absolute
+			text-align center
+			top 10px
+			width 100%
+
+	iframe 
+		display block
+		position absolute
+		right 16px
+		top 10px
+		z-index 1
+
+
+.twitter iframe
+	width 90px !important
+	right 5px
+	top 10px
+	z-index 1
+	display block
+	position absolute
+
+.facebook:hover .slide
+	left 150px
+
+.twitter:hover .slide
+	left 150px
+	
+.github:hover .slide
+	left 150px
+
+.facebook .icon, .facebook .slide
+	background #305c99
+
+.twitter .icon, .twitter .slide
+	background azul
+	
+.github .icon, .github .slide
+	background gris_oscuro
 
 
 @media screen and (min-width: 767px)
@@ -307,7 +403,7 @@ body
 	.title_project
 		margin 0 auto
 		text-align start
-		width 398px
+		width 318px
 		position relative
 		.f_project
 			display inline-block
@@ -357,7 +453,20 @@ body
 		
 		strong
 			font-size 2em
+			
+	.button
+		float left
+		&:nth-child(-n+3)
+			margin-right 1em
 						
+	.content_share
+		h3
+			float left
+			font-size 1.2em
+			margin 0.5em 0 1em 0
+		.buttons
+			float right
+
 @media screen and (min-width: 1080px)
 	header
 		display block
@@ -467,6 +576,12 @@ body
 			transform rotate(0deg)
 		to
 			transform rotate(360deg)
+			
+	.content_share
+		h3
+			font-size 2em
+			margin 0
+
 
 
 		
