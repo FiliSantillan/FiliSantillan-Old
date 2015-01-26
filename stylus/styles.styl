@@ -34,7 +34,7 @@ body
 	.line_verde
 	.line_amarillo
 		width 25%
-		height 4px
+		height 8px
 		float left
 	.line_blue
 		background azul_fuerte
@@ -50,26 +50,41 @@ body
 		
 
 .cover
-	background url(../img/cover.png)
+	background:linear-gradient(45deg,#FF9000,#13C1FC);
 	background-repeat no-repeat
 	background-position center
-	height 500px
+	height 400px
 	text-align center
 	
 	.fili
+		margin-bottom 1.2em
 		img
 			margin-top 1em
 			border-radius 50%
-			width 250px
-			border 5px solid verde
-.quote
-	font-size 1.8em
-	color verde
-	text-shadow 4px 4px 5px black
-	
-	strong
-		font-family 'Roboto' sans-serif
-		
+			width 180px
+			border 5px solid gris_oscuro
+.info_cover
+	.name_fili
+		color gris_oscuro
+		padding 0.2em
+		border 4px solid gris_oscuro
+		font-size 2em
+	.social_cover
+		margin-top 2em
+		a
+			color gris_oscuro
+			font-size 1.5em
+			margin-right 0.5em
+			transition 0.3s
+			
+			&:hover
+				color black
+				
+	.especialidad
+		margin-top 1.2em
+		span
+			color gris_oscuro
+			font-size 1.5em	
 .about
 	text-align center
 	padding 1em
@@ -388,13 +403,7 @@ body
 		padding 1em
 		
 	.padding-top
-		padding-top 6em
-		
-		.fili
-			float left
-			
-	.quote
-		font-size 2.8em
+		padding-top 3em
 		
 	.about
 		h1
@@ -402,6 +411,20 @@ body
 			
 		p
 			text-align left
+			
+	.cover
+		height 500px
+		
+	.info_cover
+		.name_fili
+			font-size 2.2em
+		.social_cover
+			a
+				font-size 2em
+					
+		.especialidad
+			span
+				font-size 2em
 	.art
 		width 48%
 		display inline-block
@@ -493,6 +516,7 @@ body
 		display block
 		background fondo
 		border-bottom 2px solid white
+		position relative
 		
 	.wrap
 		max-width 1080px
@@ -501,11 +525,14 @@ body
 	.padding-top
 		padding-top 5em
 		
-	.quote
-		font-size 3.5em
 		
 	.menu
 		text-align center
+		background rgba(186, 186, 186, 0.5)
+		z-index 20
+		position absolute
+		top 0.5em
+		width 100%
 		
 	.list
 		list-style none
@@ -515,11 +542,15 @@ body
 			padding 1em
 			
 			a
-				color azul
+				color gris_oscuro
 				font-size 1.5em
+				transition 0.2s
+				padding-bottom 0.2em
 				
 				&:hover
-					color verde
+					color black
+					border-bottom 4px solid black
+					
 	.img_header
 		img
 			width 60px
