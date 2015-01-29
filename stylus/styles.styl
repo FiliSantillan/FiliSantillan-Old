@@ -35,7 +35,10 @@ body
 	.line_amarillo
 		width 25%
 		height 8px
-		float left
+		float left 
+		margin 0
+		padding 0
+		border 0px
 	.line_blue
 		background azul_fuerte
 		
@@ -82,9 +85,16 @@ body
 				
 	.especialidad
 		margin-top 1.2em
+		height 34px
+		overflow hidden
+		text-transform uppercase
 		span
 			color gris_oscuro
-			font-size 1.5em	
+			font-size 1.5em
+			position relative
+			top 0
+			animation up_mobile 4.8s 1s infinite
+							
 .about
 	text-align center
 	padding 1em
@@ -92,13 +102,8 @@ body
 		font-family 'Lobster Two' cursive
 		color verde
 		font-size 3em
+		margin 0
 		
-	p
-		strong
-			&:before
-				content '-'
-			&:after
-				content '-'
 .menu-list
 	background rgba(black,0.2)
 	border none
@@ -126,7 +131,7 @@ body
 					text-decoration underline
 			
 
-.projects
+.projets
 	background naranja
 	padding 1em
 	text-align center
@@ -139,22 +144,22 @@ body
 		margin-bottom 0.5em
 		font-size 1.5em
 		
-	.icons_projects
+	.icons_projets
 		span
 			color white
 			font-size 2em
 			margin-right 0.5em
 			
-.projects_items
+.projets_items
 	padding 1em
 			
-.title_project
+.title_projet
 	text-align center
 	margin-top 1em
-	.f_project
+	.f_projet
 		display none
 			
-	.text_project
+	.text_projet
 		font-size 1.2em
 		margin-top 0.5em
 		strong
@@ -255,7 +260,7 @@ body
 		margin-bottom 0.5em
 		font-size 1.5em
 		
-	.icons_projects
+	.icons_projets
 		span
 			color white
 			font-size 2em
@@ -395,9 +400,23 @@ body
 	
 .github .icon, .github .slide
 	background gris_oscuro
-
-
-@media screen and (min-width: 767px)
+	
+@keyframes up_mobile
+	0%, 100%
+		top 0
+	30%
+		top -34px
+		
+	40%
+		top -69px
+		
+	60%
+		top -99px
+	
+	80%
+		top -128px
+	
+@media screen and (min-width: 768px)
 	.wrap
 		overflow hidden
 		padding 1em
@@ -409,8 +428,6 @@ body
 		h1
 			font-size 4em
 			
-		p
-			text-align left
 			
 	.cover
 		height 500px
@@ -423,8 +440,10 @@ body
 				font-size 2em
 					
 		.especialidad
+			height 45px
 			span
 				font-size 2em
+				animation up 4.8s 1s infinite
 	.art
 		width 48%
 		display inline-block
@@ -432,7 +451,7 @@ body
 		&:nth-child(odd)
 			margin-right 2%
 			
-	.projects
+	.projets
 		text-align right
 		h3
 			font-size 3em
@@ -440,22 +459,22 @@ body
 		strong
 			font-size 2em
 			
-		.icons_projects
+		.icons_projets
 			span
 				font-size 2.3em
 				
-	.title_project
+	.title_projet
 		margin 0 auto
 		text-align start
 		width 318px
 		position relative
-		.f_project
+		.f_projet
 			display inline-block
 			margin-right 0.5em
 			img
 				width 60px
 							
-		.text_project
+		.text_projet
 			display inline-block
 			position absolute
 			top 0.6em
@@ -510,14 +529,28 @@ body
 			margin 0.5em 0 1em 0
 		.buttons
 			float right
-
+			
+	@keyframes up
+		0%, 100%
+			top 0
+		30%
+			top -46px
+			
+		40%
+			top -90px
+			
+		60%
+			top -130px
+		
+		80%
+			top -175px
+			
 @media screen and (min-width: 1080px)
 	header
-		display block
 		background fondo
-		border-bottom 2px solid white
 		position relative
-		
+		display block
+
 	.wrap
 		max-width 1080px
 		margin 0 auto
@@ -551,6 +584,34 @@ body
 					color black
 					border-bottom 4px solid black
 					
+	.cover
+		.fili
+			animation drop 1.5s
+			
+	.info_cover
+		animation text-fade 1.8s
+		.social_cover
+			a
+				&:nth-child(1)
+					animation text-fade 2s
+				&:nth-child(2)
+					animation text-fade 2.2s
+				&:nth-child(3)
+					animation text-fade 2.4s
+				&:nth-child(4)
+					animation text-fade 2.6s
+				&:nth-child(5)
+					animation text-fade 2.8s
+					animation aumentar 2.7s 
+				&:nth-child(6)
+					animation text-fade 2.6s
+				&:nth-child(7)
+					animation text-fade 2.4s
+				&:nth-child(8)
+					animation text-fade 2.2s
+				&:nth-child(9)
+					animation text-fade 2s
+					
 	.img_header
 		img
 			width 60px
@@ -569,10 +630,9 @@ body
 	.art
 		width 31.333333333%
 		vertical-align top
-		margin-right 0 !important
+		margin-right 0 !important	
 			
-			
-	.projects
+	.projets
 		h3
 			font-size 4em
 			
@@ -582,7 +642,7 @@ body
 		p
 			font-size 1.3em
 			
-		.icons_projects
+		.icons_projets
 			span
 				font-size 2.5em
 				
@@ -620,19 +680,55 @@ body
 			font-size 1.3em
 			
 	.hi-icon-effect-6 .hi-icon:hover:before
-		animation: spinAround 1.3s linear infinite
-
-
-	@keyframes spinAround
-		from
-			transform rotate(0deg)
-		to
-			transform rotate(360deg)
+		animation vueltas 1.3s linear infinite
 			
 	.content_share
 		h3
 			font-size 2em
 			margin 0
+			
+			
+	@keyframes vueltas
+		0%
+			transform rotate(0deg)
+		100%
+			transform rotate(360deg)
+
+	@keyframes drop
+		0%
+			margin-top -300px
+			
+		40%, 51%, 90%
+			margin-top 0
+			
+		42%, 48%
+			margin-top 3px
+			
+		45%
+			margin-top -1px
+		
+	@keyframes text-fade
+		0%, 20%, 40%
+			opacity 0
+			
+		60% 
+			opacity 0.6
+			
+		80%
+			opacity 0.8
+			
+		100%
+			opacity 1
+			
+	@keyframes aumentar
+		0%
+			transform scale(2.5)
+			
+		50%
+			transform scale(2)
+			
+		100%
+			transform scale(1)
 
 
 

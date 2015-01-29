@@ -10,11 +10,11 @@
 <body>
 	<div id="st-container" class="st-container">
 		<nav class="st-menu st-effect-9" id="menu-9">
-			<h2>Filiberto Martínez</h2>
+			<h2>Filiberto Santillán</h2>
 			<ul>
 				<li><a class="icon-me" href="#about">Sobre mí</a></li>
-				<li><a class="icon-projects" href="#projects">Proyetos</a></li>
-				<li><a class="icon-blog" href="#">Blog</a></li>
+				<li><a class="icon-projects" href="#projets">Proyetos</a></li>
+				<li><a class="icon-blog" href="http://filimx.io/blog">Blog</a></li>
 				<li><a class="icon-contact" href="#contact">Contacto</a></li>
 			</ul>
 			<div class="social">
@@ -36,44 +36,41 @@
 				<header class="header">
 					<div class="menu">
 						<ul class="list">
-							<li class="item"><a href="#about">Sobre mí</a></li>
-							<li class="item"><a href="#projects">Proyectos</a></li>
-							<li class="item"><a href="#">Blog</a></li>
+							<li class="item"><a data-scroll href="#about">Sobre mí</a></li>
+							<li class="item"><a href="#projets">Proyectos</a></li>
+							<li class="item"><a href="http://filimx.io/blog">Blog</a></li>
 							<li class="item"><a href="#contact">Contacto</a></li>
 						</ul>
 					</div>
 				</header>
-				<section class="cover">
+				<section class=".about cover">
 					<div class="wrap padding-top">
 						<figure class="fili">
 							<img src="https://pbs.twimg.com/profile_images/521393296350789632/lgg2ACDZ_400x400.png" alt="FiliMX" title="FiliMX">
 						</figure>
-						<dic class="info_cover">
+						<div class="info_cover">
 							<strong class="name_fili">Filiberto Santillán</strong>
 							<div class="social_cover">
-								<a href="#" class="icon-facebook"></a>
-								<a href="#" class="icon-twitter"></a>
-								<a href="#" class="icon-instagram"></a>
-								<a href="#" class="icon-google-plus"></a>
-								<a href="#" class="icon-github"></a>
-								<a href="#" class="icon-linkedin"></a>
-								<a href="#" class="icon-dribbble"></a>
-								<a href="#" class="icon-rss"></a>
-								<a href="#" class="icon-mail"></a>
+								<a href="https://www.facebook.com/FiliSantillan" class="icon-facebook" target="blank"></a>
+								<a href="https://twitter.com/FiliMX" class="icon-twitter" target="blank"></a>
+								<a href="http://instagram.com/filimx/" class="icon-instagram" target="blank"></a>
+								<a href="https://plus.google.com/u/0/+FiliMartínezZ" class="icon-google-plus" target="blank"></a>
+								<a href="https://github.com/FiliMX" class="icon-github" target="blank"></a>
+								<a href="https://www.linkedin.com/profile/view?id=322447536&trk=nav_responsive_tab_profile" class="icon-linkedin" target="blank"></a>
+								<a href="https://dribbble.com/FiliMX" class="icon-dribbble" target="blank"></a>
+								<a href="http://filimx.io/blog" class="icon-rss" target="blank"></a>
+								<a href="mailto:fili06604@gmail.com" class="icon-mail"></a>
 							</div>
 							<div class="especialidad">
-								<span>Front-End Developer</span>
+								<span>Front-End<br/>html5<br/>css3<br/> JavaScript<br/> y más..</span>
 							</div>
-						</dic>
+						</div>
 					</div>
 				</section>
 				<section class="about" id="about">
+					<span id="about"></span>
 					<div class="wrap">
-						<h1>¡Hola que tal!</h1>
-						<p>Mi nombre es Filiberto, es un poco raro pero tu llámame <strong>Fili</strong>, tengo 18 años y vivo en México, me considero una persona emprendedora, creativa, con ganas de siempre aprenter más y más.</p>
-						<p>Soy una persona que le encanta ayudar, resolver dudas y sobre todo inspirar a los demás, así que si tienes algo que decirme o preguntarme no dudes en hacerlo con todo gusto te contestare.</p>
-						<p>Me encanta aprender cosas nuevas, tomar retos y algo que es muy raro pero cierto es que amo cometer errores, porque de ello se aprende muchisimo y gracias a ello refuerzo aun más lo que ya se.</p>
-						<p>Te doy la bienvenida a mi portafolio y que tengas buen día.</p>
+						<h1 class="down_animation">¡Hola que tal!</h1>
 					</div>
 				</section>
 				<section class="art_me">
@@ -122,11 +119,11 @@
 						</article>
 					</div>
 				</section>
-				<section class="projects" id="projects">
+				<section class="projets" id="projets">
 					<div class="wrap">
-						<article class="projects_text">
+						<article class="projets_text">
 							<h3>Proyectos</h3>
-							<div class="icons_projects">
+							<div class="icons_projets">
 								<span class="icon-code"></span>
 								<span class="icon-branch"></span>
 								<span class="icon-laptop"></span>
@@ -136,13 +133,13 @@
 						</article>
 					</div>
 				</section>
-				<section class="projects_items">
+				<section class="projets_items">
 					<div class="wrap">
-						<div class="title_project">
-							<figure class="f_project">
+						<div class="title_projet">
+							<figure class="f_projet">
 								<img src="img/mejorando.png" alt="">
 							</figure>
-							<div class="text_project">
+							<div class="text_projet">
 								<strong>Platzi</strong>
 								<span>Presentaciones</span>
 							</div>
@@ -256,6 +253,7 @@
 </body>
 <script src="js/classie.js"></script>
 <script src="js/sidebarEffects.js"></script>
+<script src="js/smooth-scroll.min.js"></script>
 <script>
   !function(d,s,id){
     var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';
