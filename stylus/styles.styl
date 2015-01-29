@@ -13,7 +13,7 @@ rosita = #e83f66
 naranja = #ec5358
 
 body
-	background fondo-claro
+	background #f3efe0
 
 header
 	display none
@@ -27,6 +27,16 @@ a
 
 body
 	font-family 'Roboto' sans-serif
+	
+footer
+	background fondo
+	text-align center
+	color white
+	padding 1em
+	a
+		color azul_fuerte
+		&:hover
+			text-decoration underline
 	
 .line_colors
 	.line_blue
@@ -95,10 +105,10 @@ body
 			top 0
 			animation up_mobile 4.8s 1s infinite
 							
-.about
+.titles
 	text-align center
 	padding 1em
-	h1
+	strong
 		font-family 'Lobster Two' cursive
 		color verde
 		font-size 3em
@@ -118,7 +128,7 @@ body
 	padding 1em
 	background gris_oscuro
 	.art
-		padding 1em		
+		padding 1em
 		.strong_me
 			font-size 1.4em
 			color verde
@@ -389,7 +399,7 @@ body
 .twitter:hover .slide
 	left 150px
 	
-.github:hover .slide
+.google:hover .slide
 	left 150px
 
 .facebook .icon, .facebook .slide
@@ -398,8 +408,8 @@ body
 .twitter .icon, .twitter .slide
 	background azul
 	
-.github .icon, .github .slide
-	background gris_oscuro
+.google .icon, .google .slide
+	background #aa241d
 	
 @keyframes up_mobile
 	0%, 100%
@@ -416,7 +426,7 @@ body
 	80%
 		top -128px
 	
-@media screen and (min-width: 768px)
+@media screen and (min-width: 767px)
 	.wrap
 		overflow hidden
 		padding 1em
@@ -424,8 +434,8 @@ body
 	.padding-top
 		padding-top 3em
 		
-	.about
-		h1
+	.titles
+		strong
 			font-size 4em
 			
 			
@@ -444,8 +454,11 @@ body
 			span
 				font-size 2em
 				animation up 4.8s 1s infinite
+				
+	.art_me
+		text-align left
 	.art
-		width 48%
+		width 44%
 		display inline-block
 		vertical-align top
 		&:nth-child(odd)
@@ -489,7 +502,7 @@ body
 	.presentations
 		.buttons
 			a
-				width 48%
+				width 35%
 				display inline-block
 				&:nth-child(odd)
 					margin-right 2%
@@ -504,10 +517,10 @@ body
 					
 	.sites
 		.content_sites
-			width 45%
+			width 42%
 			display inline-block
 			&:nth-child(odd)
-				margin-right 9%
+				margin-right 13%
 				
 	.contact
 		text-align left
@@ -620,15 +633,15 @@ body
 		display none
 				
 
-	.about
-		h1
+	.titles
+		strong
 			font-size 5em
 			
 		p
 			font-size 1.3em
 			
 	.art
-		width 31.333333333%
+		width 30%
 		vertical-align top
 		margin-right 0 !important	
 			
