@@ -1,3 +1,63 @@
+commit 5032fa4764607cafb594ff1c281ee8cd473f280a
+Author: Filiberto Martínez <fili06604@gmail.com>
+Date:   Wed Jan 28 22:11:10 2015 -0600
+
+    Nuevos cambios: animaciones :D
+
+commit cfa401931c7ad7b89b4bfd35569e1c2605911abf
+Author: Filiberto Martínez <fili06604@gmail.com>
+Date:   Sun Jan 25 18:40:51 2015 -0600
+
+    Prueba2: cambio de diseno: cover
+
+commit a041595ddbd4395b99983129331d02246e05fba7
+Author: Filiberto Martínez <fili06604@gmail.com>
+Date:   Sun Jan 25 15:41:36 2015 -0600
+
+    Linea de colores agregada
+
+commit 8692abe84a5e361a7fd32967df4210f47195ed21
+Author: Filiberto Martínez <fili06604@gmail.com>
+Date:   Sat Jan 24 20:25:28 2015 -0600
+
+    Cambios pequenos
+
+commit e1b572762e0bfae2a7bf3ee3b11c05155cfe7474
+Author: Filiberto Martínez <fili06604@gmail.com>
+Date:   Tue Jan 6 19:44:01 2015 -0600
+
+    Se corrigieron errores, se agrego sitios web y contacto
+
+commit 680c97b6eaf9c055dc0d6420a233782ef48de0bc
+Author: Filiberto Martínez <fili06604@gmail.com>
+Date:   Sun Jan 4 22:12:39 2015 -0600
+
+    Arreglando pequenos bugs
+
+commit 300a2d7ce9fff6b784ac396e3fdca570c1245ecb
+Author: Filiberto Martínez <fili06604@gmail.com>
+Date:   Sun Jan 4 20:44:48 2015 -0600
+
+    Progreso de hoy: Proyectos, presentaciones y correción de algunos errores
+
+commit 62fd70e611ce3084574d4192be7ba736f0efee5c
+Author: Filiberto Martínez <fili06604@gmail.com>
+Date:   Sun Jan 4 00:53:40 2015 -0600
+
+    Avanzando más en el proyecto: agregando redes sociales, imagenes de lo que se hacer y su descripción
+
+commit 5e035b623fec7d81ccfd77728d43df3929a1434a
+Author: Filiberto Martínez <fili06604@gmail.com>
+Date:   Sat Jan 3 17:49:34 2015 -0600
+
+    Problema con git add -A: resuelto
+
+commit 5f81e1d5eb567e8580d605073c30fab8151a05ba
+Author: Filiberto Martínez <fili06604@gmail.com>
+Date:   Sat Jan 3 17:48:40 2015 -0600
+
+    Empezando el proyecto: header, off-canvas, cover-image
+
 commit a736a9507ea68100fb27de37576e0a4e8ccfdd1a
 Author: Filiberto Martínez <fili06604@gmail.com>
 Date:   Sat Dec 27 11:40:59 2014 -0600
