@@ -1,23 +1,38 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
+	<title>Filiberto Santillán | Front-End Developer</title>
 	<meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+	<meta name="author" content="Filiberto Martínez">
+
+	<meta property="og:title" content="Filiberto Santillán | Front-End Developer" />
+	<meta property="og:site_name" content="Filiberto Santillán | Front-End Developer"/>
+	<meta property="og:url" content="http://filimx.io" />
+	<meta property="og:description" content="Front-End Developer | Back-End | UX | UI | Aprendiendo y compartiendo conocimiento con el mundo." />
+	<meta property="article:author" content="https://www.facebook.com/379077102274280" />
+	<meta property="og:image" content="http://filimx.io/img/avatar@2x.png" />
+
 	<link rel="stylesheet" href="css/styles.css">
 	<link href='http://fonts.googleapis.com/css?family=Lobster+Two' rel='stylesheet' type='text/css'>
 	<link href='http://fonts.googleapis.com/css?family=Roboto:300,700,400' rel='stylesheet' type='text/css'>
+
 	<script src="https://apis.google.com/js/platform.js" async defer>
 	  {lang: 'es-419'}
 	</script>
 <body>
-	<div class="line_colors">
+	<div class="button_fixed">
+		<a href="#" class="icon-list menu_icon is-active" id="show"></a>
+		<a href="#" class="icon-arrow-left row_left_icon" id="hide"></a>
+	</div>
+	<div class="line_colors" id="inicio">
 		<div class="line_blue"></div>
 		<div class="line_rosa"></div>
 		<div class="line_verde"></div>
 		<div class="line_amarillo"></div>
 	</div>
 	<header class="header">
-		<nav class="menu">
+		<nav class="menu" id="menu">
 			<ul class="list">
 				<li class="item"><a data-scroll href="#about">Sobre mí</a></li>
 				<li class="item"><a href="#projets">Proyectos</a></li>
@@ -29,12 +44,12 @@
 	<section class="cover">
 		<div class="wrap padding-top">
 			<figure class="fili">
-				<img src="img/avatar.jpg" alt="FiliMX" title="FiliMX">
+				<img src="img/avatar.png" alt="FiliMX" title="FiliMX">
 			</figure>
 			<div class="info_cover">
 				<strong class="name_fili">Filiberto Santillán</strong>
 				<div class="social_cover">
-					<a href="https://www.facebook.com/FiliSantillan" class="icon-facebook" target="blank"></a>
+					<a href="https://www.facebook.com/379077102274280" class="icon-facebook" target="blank"></a>
 					<a href="https://twitter.com/FiliMX" class="icon-twitter" target="blank"></a>
 					<a href="http://instagram.com/filimx/" class="icon-instagram" target="blank"></a>
 					<a href="https://plus.google.com/u/0/+FiliMartínezZ" class="icon-google-plus" target="blank"></a>
@@ -181,7 +196,7 @@
 			</article>
 			<article id="set-6">
 				<div class="hi-icon-effect-6">
-					<a href="https://www.facebook.com/FiliSantillan" class="hi-icon icon-facebook" target="blank"></a>
+					<a href="https://www.facebook.com/379077102274280" class="hi-icon icon-facebook" target="blank"></a>
 					<a href="https://twitter.com/FiliMX" class="hi-icon icon-twitter" target="blank"></a>
 					<a href="https://github.com/FiliMX" class="hi-icon icon-github" target="blank"></a>
 					<a href="mailto:fili06604@gmail.com" class="hi-icon icon-mail"></a>
@@ -200,8 +215,7 @@
 						<div class="slide">
 							<p>Facebook</p>
 						</div>
-						<iframe src="//www.facebook.com/plugins/like.php?href=http%3A%2F%2Fdevelopers.facebook.com%2Fdocs%2Freference%2Fplugins%2Flike&send=false&layout=button_count&width=80&show_faces=false&font&colorscheme=light&action=like&height=20&appId=568581339861351" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:80px; height:20px;" allowTransparency="true">
-						</iframe>
+						<div class="fb-share-button" data-href="http://filimx.io/" data-layout="button"></div>
 					</div>
 					<div class="twitter button">
 						<div class="icon">
@@ -230,6 +244,9 @@
 	<footer class="footer">
 		<span>©2015 Design & Development by <a href="https://twitter.com/FiliMX" target="blank">Filiberto Santillán</a></span>
 	</footer>
+	<div class="button_up">
+		<a href="#inicio" class="icon-arrow-up flechita"></a>
+	</div>
 </body>
 <script src="//code.jquery.com/jquery-1.11.2.min.js"></script>
 <script src="js/script.js"></script>
@@ -241,4 +258,12 @@
       js.id=id;
       js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');
 </script>
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.0";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
 </html>

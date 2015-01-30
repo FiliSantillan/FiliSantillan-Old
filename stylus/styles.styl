@@ -16,8 +16,9 @@ body
 	background #f3efe0
 
 header
-	display none
 	text-transform uppercase
+	
+
 	
 figure
 	margin 0
@@ -37,7 +38,33 @@ footer
 		color azul_fuerte
 		&:hover
 			text-decoration underline
+			
+.button_fixed
+	background rgba(white,0.3)
+	position fixed
+	z-index 998
+	right 0.5em
+	top 0.5em
 	
+	.menu_icon
+		&.is-active
+			display block
+			
+	.row_left_icon
+		&.is-active
+			display block
+			
+	a
+		font-size 2em
+		color fondo
+		padding 0.3em
+		display none
+		&:hover
+			color azul_fuerte
+			
+.button_up
+	display none
+			
 .line_colors
 	.line_blue
 	.line_rosa
@@ -60,6 +87,35 @@ footer
 	
 	.line_amarillo
 		background amarillo
+.menu
+	position fixed
+	left -200px
+	top 0.5em
+	width 170px
+	background rgba(azul_fuerte)
+	transition 0.3s
+	z-index 999
+	padding 0.5em
+	&.is-active
+		left 0
+		
+.list
+	list-style none
+	margin 0
+	padding 0
+	.item
+		display block
+		padding 0.5em
+			
+		a
+			color gris_oscuro
+			font-size 1.5em
+			transition 0.2s
+			padding-bottom 0.2em
+				
+			&:hover
+				color black
+				border-bottom 4px solid black
 		
 
 .cover
@@ -380,11 +436,11 @@ footer
 			top 10px
 			width 100%
 
+.facebook
 	iframe
 		display block
 		position absolute
-		right 16px
-		top 10px
+		margin 10px auto
 		z-index 1
 		
 .twitter
@@ -396,6 +452,10 @@ footer
 		z-index 1
 		display block
 		position absolute
+		
+.github
+	iframe
+		left 67px 
 
 .facebook:hover .slide
 	left 150px
@@ -531,6 +591,27 @@ footer
 			
 			
 @media screen and (min-width: 1080px)
+	.button_fixed
+		display none
+		
+		
+	.button_up
+		background rgba(white,0.3)
+		position fixed
+		z-index 998
+		display block
+		right 1em
+		bottom 1em
+		padding 0.5em
+		border-radius 7px
+		border 2px solid black
+		
+		a
+			font-size 2em
+			color fondo
+			&:hover
+				color azul_fuerte
+		
 	header
 		background fondo
 		position relative
@@ -550,25 +631,15 @@ footer
 		z-index 20
 		position absolute
 		top 0.5em
-		width 100%
+		left 0
+		right 0
+		width 99%
 		
 	.list
-		list-style none
-		margin 0
 		.item
 			display inline-block
-			padding 1em
+			padding 0.7em
 			
-			a
-				color gris_oscuro
-				font-size 1.5em
-				transition 0.2s
-				padding-bottom 0.2em
-				
-				&:hover
-					color black
-					border-bottom 4px solid black
-					
 	.cover
 		.fili
 			animation drop 1.5s
