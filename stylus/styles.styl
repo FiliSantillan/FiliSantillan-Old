@@ -74,7 +74,6 @@ footer
 		img
 			margin-top 1em
 			border-radius 50%
-			width 180px
 			border 5px solid gris_oscuro
 .info_cover
 	.name_fili
@@ -95,16 +94,10 @@ footer
 				
 	.especialidad
 		margin-top 1.2em
-		height 34px
-		overflow hidden
 		text-transform uppercase
 		span
 			color gris_oscuro
-			font-size 1.5em
-			position relative
-			top 0
-			animation up_mobile 4.8s 1s infinite
-							
+			font-size 1.5em						
 .titles
 	text-align center
 	padding 1em
@@ -145,10 +138,6 @@ footer
 	background naranja
 	padding 1em
 	text-align center
-	h3
-		font-size 2em
-		color white
-		margin 0.1em
 	strong
 		color white
 		margin-bottom 0.5em
@@ -159,6 +148,13 @@ footer
 			color white
 			font-size 2em
 			margin-right 0.5em
+			
+	.projets_text
+		p
+			a
+				color white
+				&:hover
+					text-decoration underline
 			
 .projets_items
 	padding 1em
@@ -223,10 +219,10 @@ footer
 			overflow hidden
 			transition height .3s
 			img
-				width 100px
 				margin 2.5em auto
 				display block
 				transition margin-top .3s
+				
 		.info_sites
 			height 90px
 			background azul_fuerte
@@ -323,6 +319,13 @@ footer
 	text-align center
 	h3
 		font-size 1.2em
+		strong
+			color azul_fuerte
+			&:before
+				content "'"
+				
+			&:after
+				content "'"
 	
 .button
 	background #DCE0E0
@@ -377,21 +380,22 @@ footer
 			top 10px
 			width 100%
 
-	iframe 
+	iframe
 		display block
 		position absolute
 		right 16px
 		top 10px
 		z-index 1
-
-
-.twitter iframe
-	width 90px !important
-	right 5px
-	top 10px
-	z-index 1
-	display block
-	position absolute
+		
+.twitter
+.github 
+	iframe
+		width 90px !important
+		right 5px
+		top 10px
+		z-index 1
+		display block
+		position absolute
 
 .facebook:hover .slide
 	left 150px
@@ -399,7 +403,7 @@ footer
 .twitter:hover .slide
 	left 150px
 	
-.google:hover .slide
+.github:hover .slide
 	left 150px
 
 .facebook .icon, .facebook .slide
@@ -408,23 +412,9 @@ footer
 .twitter .icon, .twitter .slide
 	background azul
 	
-.google .icon, .google .slide
-	background #aa241d
+.github .icon, .github .slide
+	background fondo-claro
 	
-@keyframes up_mobile
-	0%, 100%
-		top 0
-	30%
-		top -34px
-		
-	40%
-		top -69px
-		
-	60%
-		top -99px
-	
-	80%
-		top -128px
 	
 @media screen and (min-width: 767px)
 	.wrap
@@ -450,10 +440,8 @@ footer
 				font-size 2em
 					
 		.especialidad
-			height 45px
 			span
 				font-size 2em
-				animation up 4.8s 1s infinite
 				
 	.art_me
 		text-align left
@@ -484,8 +472,6 @@ footer
 		.f_projet
 			display inline-block
 			margin-right 0.5em
-			img
-				width 60px
 							
 		.text_projet
 			display inline-block
@@ -543,20 +529,6 @@ footer
 		.buttons
 			float right
 			
-	@keyframes up
-		0%, 100%
-			top 0
-		30%
-			top -46px
-			
-		40%
-			top -90px
-			
-		60%
-			top -130px
-		
-		80%
-			top -175px
 			
 @media screen and (min-width: 1080px)
 	header
