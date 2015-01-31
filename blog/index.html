@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+	<link rel="stylesheet" href="css/styles.css">
+	<link rel="shortcut icon" type="image/x-icon" href="favicon/favicon.ico" />
+	<link href='http://fonts.googleapis.com/css?family=Lobster+Two' rel='stylesheet' type='text/css'>
+	<link href='http://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'></head>
+<body>
+	<canvas id="bubbles" width="100%" height="100%">Your browser does not support the Canvas element.</canvas>
+	<div class="centrar">
+		<h1>¡Hola que tal!</h1>
+		<p href="#" class="tubo">
+			<span class="burbujas"></span>
+		</p>
+		<p>El blog esta en construcción</p>
+		<p><strong>Esperalo ... </strong></p>
+		<div class="social">
+			<a href="https://www.facebook.com/379077102274280" target="blank" class="icon-facebook"></a>
+			<a href="https://twitter.com/FiliMX" target="blank" class="icon-twitter"></a>
+			<a href="http://instagram.com/filimx/" target="blank" class="icon-instagram"></a>
+			<a href="https://github.com/FiliMX" target="blank" class="icon-github"></a>
+			<a href="mailto:fili06604@gmail.com" class="icon-mail"></a>
+		</div>
+	</div>
+</body>
+<script>
+	var velocidad = 0.5;
+	var particulas = 20;
+	var mouse = {x:0, y:0};
+	var particulastwo = [];
+	var colors = [ "#fad542","#9500b5","#ff2146" ];
+	var canvas = document.getElementById('bubbles');
+	var context;
+
+if (canvas && canvas.getContext) {
+  context = canvas.getContext('2d');
+
+  for( var i = 0; i < particulas; i++ ) {
+    particulastwo.push( { 
+      x: Math.random()*window.innerWidth, 
+      y: Math.random()*window.innerHeight, 
+      vx: ((Math.random()*(velocidad*2))-velocidad),
+      vy: ((Math.random()*(velocidad*2))-velocidad),
+      size: 5+Math.random()*10,
+      color: colors[ Math.floor( Math.random() * colors.length ) ]
+    } );
+  }
+
+  Initialize();
+}
+
+function Initialize() {
+  window.addEventListener('resize', ResizeCanvas, false);
+  setInterval( TimeUpdate, 30 );
+
+  ResizeCanvas();
+}
+
+function TimeUpdate(e) {
+
+  context.clearRect(0, 0, window.innerWidth, window.innerHeight);
+
+  var len = particulastwo.length;
+  var particle;
+
+  for( var i = 0; i < len; i++ ) {
+    particle = particulastwo[i];
+
+    if (!particle.frozen) {
+      particle.x += particle.vx;
+      particle.y += particle.vy;
+
+      if (particle.x > window.innerWidth) {
+        particle.vx = -velocidad - Math.random();
+      }
+      else if (particle.x < 0) {
+        particle.vx = velocidad + Math.random();
+      }
+      else {
+        particle.vx *= 1 + (Math.random() * 0.005);
+      }
+
+      if (particle.y > window.innerHeight) {
+        particle.vy = -velocidad - Math.random();
+      }
+      else if (particle.y < 0) {
+        particle.vy = velocidad + Math.random();
+      }
+      else {
+        particle.vy *= 1 + (Math.random() * 0.015);
+      }
+
+      var distanceFactor = DistanceBetween( mouse, particle );
+      distanceFactor = Math.max( Math.min( 15 - ( distanceFactor / 10 ), 10 ), 1 );
+
+      particle.currentSize = particle.size*distanceFactor;
+    }
+
+    context.fillStyle = particle.color;
+    context.beginPath();
+    context.arc(particle.x,particle.y,particle.currentSize,0,Math.PI*2,true);
+    context.closePath();
+    context.fill();
+
+  }
+}
+
+function ResizeCanvas(e) {
+  canvas.width = window.innerWidth;
+  canvas.height = window.innerHeight;
+}
+
+function DistanceBetween(p1,p2) {
+  var dx = p2.x-p1.x;
+  var dy = p2.y-p1.y;
+  return Math.sqrt(dx*dx + dy*dy);
+}
+</script>
+</html>
