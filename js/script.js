@@ -1,23 +1,25 @@
-var $buttonShow = document.getElementById("show");
-var $buttonHide = document.getElementById("hide");
-var $menu = document.getElementById("menu");
+'use strict'; 
+
+var $buttonShow = document.getElementById('show');
+var $buttonHide = document.getElementById('hide');
+var $menu = document.getElementById('menu');
 
 var verMenu = function(e){
 	$buttonShow.classList.remove('is-active');
 	$buttonHide.classList.add('is-active');
 	$menu.classList.add('is-active');
 	e.preventDefault();
-}
+};
 
 var ocultarMenu = function(e){
 	$buttonShow.classList.add('is-active');
 	$buttonHide.classList.remove('is-active');
 	$menu.classList.remove('is-active');
 	e.preventDefault();
-}
+};
 
-$buttonShow.addEventListener("click", verMenu);
-$buttonHide.addEventListener("click", ocultarMenu);
+$buttonShow.addEventListener('click', verMenu);
+$buttonHide.addEventListener('click', ocultarMenu);
 
 //JQuery
 $(function(){
