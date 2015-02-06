@@ -1,0 +1,778 @@
+body
+	background $bg-color
+
+header
+	text-transform uppercase
+
+figure
+	margin 0
+	
+a
+	text-decoration none
+
+body
+	font-family $font-family
+	
+footer
+	background $footer-bg
+	text-align center
+	color $text-color
+	padding 1em
+	a
+		color $hamburger-button-color
+		&:hover
+			text-decoration underline
+			
+.button_fixed
+	background rgba(255,255,255,0.3)
+	position fixed
+	z-index 998
+	right 0.5em
+	top 0.5em
+	
+	.menu_icon
+		&.is-active
+			display block
+			
+	.row_left_icon
+		&.is-active
+			display block
+			
+	a
+		font-size 2em
+		color fondo
+		padding 0.3em
+		display none
+		&:hover
+			color $tertiary-color
+			
+.button_up
+	display none
+			
+.line_colors
+	.line_blue
+	.line_pink
+	.line_green
+	.line_yellow
+		width 25%
+		height 8px
+		float left 
+		margin 0
+		padding 0
+		border 0px
+	.line_blue
+		background $first-line-color
+		
+	.line_pink
+		background $second-line-color
+		
+	.line_green
+		background $third-line-color
+	
+	.line_yellow
+		background $fourth-line-color
+.menu
+	position fixed
+	left -200px
+	top 0.5em
+	width 170px
+	background $bg-menu-color
+	transition 0.3s
+	z-index 999
+	padding 0.4em
+	&.is-active
+		left 0
+		
+.list
+	list-style none
+	margin 0
+	padding 0
+	.item
+		display block
+		padding 0.5em
+			
+		a
+			color $primary-color
+			font-size 1.5em
+			transition 0.2s
+			padding-bottom 0.2em
+				
+			&:hover
+				color black
+				border-bottom 4px solid black
+		
+
+.cover
+	background:linear-gradient(45deg,#FF9000,#13C1FC);
+	background-repeat no-repeat
+	background-position center
+	height 400px
+	text-align center
+	
+	.fili
+		margin-bottom 1.2em
+		img
+			margin-top 1em
+			border-radius 50%
+			border 5px solid $primary-color
+.info_cover
+	.name_fili
+		color $primary-color
+		padding 0.2em
+		border 4px solid $primary-color
+		font-size 2em
+	.social_cover
+		margin-top 2em
+		a
+			color $primary-color
+			font-size 1.5em
+			margin-right 0.5em
+			transition 0.3s
+			
+			&:hover
+				color black
+				
+	.especialidad
+		margin-top 1.2em
+		text-transform uppercase
+		span
+			color $primary-color
+			font-size 1.5em						
+.titles
+	text-align center
+	padding 1em
+	strong
+		font-family $font-family-subtitle
+		color $secondary-color
+		font-size 3em
+		margin 0
+		
+.menu-list
+	background rgba($primary-color,0.2)
+	border none
+	position fixed
+	font-size 2em
+	top 0.5em
+	left 0.5em
+	color $text-color
+	
+.art_me
+	text-align center
+	padding 1em
+	background $primary-color
+	.art
+		padding 1em
+		.strong_me
+			font-size 1.4em
+			color $secondary-color
+			
+		p
+			color $text-color
+			a
+				color $tertiary-color
+				&:hover
+					text-decoration underline
+			
+.projets
+	background naranja
+	padding 1em
+	text-align center
+	strong
+		color $text-color
+		margin-bottom 0.5em
+		font-size 1.5em
+		
+	.icons_projets
+		span
+			color $text-color
+			font-size 2em
+			margin-right 0.5em
+			
+	.projets_text
+		p
+			a
+				color $text-color
+				&:hover
+					text-decoration underline
+			
+.projets_items
+	padding 1em
+			
+.title_projet
+	text-align center
+	margin-top 1em
+	.f_projet
+		display none
+			
+	.text_projet
+		font-size 1.2em
+		margin-top 0.5em
+		strong
+			padding-right 1.2em
+			border-right 2px solid black
+			
+		span
+			padding-left 0.4em
+			
+.presentations
+	background $bg-presentation-section
+	text-align center
+	padding 1em
+	.buttons
+		padding 1em
+		a
+			padding 1.5em
+			border 4px solid white
+			color $text-color
+			display block
+			font-size 1.3em
+			transition 0.3s
+			margin-bottom 0.7em
+			&:hover
+				background $bg-button
+				color $tertiary-color
+				border 4px solid $primary-color
+				
+				
+.sites_title
+	text-align center
+	margin 1.5em 0
+	font-size 1.2em
+	strong
+		padding-right 1em
+		border-right 2px solid black
+	span
+		padding-left 0.4em
+
+.sites
+	padding 1em
+	background $bg-site-section
+	.content_sites
+		background $secondary-color
+		height 300px
+		overflow hidden
+		margin-bottom 1em
+		border 3px dashed white
+		.f_sites
+			height 210px
+			background $primary-color
+			overflow hidden
+			transition height .3s
+			img
+				margin 2.5em auto
+				display block
+				transition margin-top .3s
+				
+		.info_sites
+			height 90px
+			background $tertiary-color
+			overflow hidden
+			transition height .3s
+			
+			.title_sites
+				text-transform uppercase
+				font-size 1.5em
+				color $text-color
+				margin 0.5em 0 0.3em 0.5em
+				
+			p
+				margin 0 0.5em
+				
+			a
+				float right
+				margin-top -2.5em
+				padding 0.7em 0.4em
+				color $text-color
+				background $primary-color
+				margin-right 0.5em
+				border-radius 4px
+				
+				&:hover
+					background $bg-button
+					color $primary-color
+					transition .3s
+					
+.blog
+	padding 1em
+	background $tertiary-color
+	text-align center
+	color $text-color
+.contact
+	padding 1em
+	background $secondary-color
+	text-align center
+	
+	h3
+		font-size 2em
+		color black
+		margin 0.1em
+	strong
+		color black
+		margin-bottom 0.5em
+		font-size 1.5em
+		
+	.icons_projets
+		span
+			color $text-color
+			font-size 2em
+			margin-right 0.5em
+
+.hi-icon
+	display inline-block
+	font-size 0px
+	cursor pointer
+	margin 15px 30px
+	width 90px
+	height 90px
+	border-radius 50%
+	text-align center
+	position relative
+	z-index 1
+	color $text-color
+	
+.hi-icon:after
+	pointer-events none
+	position absolute
+	width 100%
+	height 100%
+	border-radius 50%
+	content ''
+	box-sizing content-box
+
+.hi-icon:before
+	speak none
+	font-size 48px
+	line-height 90px
+	font-style normal
+	font-weight normal
+	font-variant normal
+	text-transform none
+	display block
+	font-smoothing antialiased
+
+.hi-icon-effect-6 .hi-icon
+	box-shadow 0 0 0 4px rgba(255,255,255,1)
+	transition background 0.3s, color 0.3s
+
+
+.hi-icon-effect-6 .hi-icon:hover
+	background $bg-button
+	color $secondary-color
+	
+.share
+	padding 1em
+	text-align center
+	h3
+		font-size 1.2em
+		strong
+			color $tertiary-color
+			&:before
+				content "'"
+				
+			&:after
+				content "'"
+	
+.button
+	background #DCE0E0
+	position relative
+	display block
+	height 40px
+	overflow hidden
+	width 150px
+	border-radius 3px
+	margin 0 auto
+	margin-bottom 1em
+
+	.icon
+		display block
+		float left
+		position relative
+		z-index 3
+		height 100%
+		vertical-align top
+		width 38px
+		border-radius 3px 0px 0px 3px
+		text-align center
+
+
+		span
+			color #fff
+			line-height 42px
+
+
+	.slide
+		z-index 2
+		display block
+		margin 0
+		height 100%
+		left 38px
+		position absolute
+		width 112px
+		border-radius: 0px 3px 3px 0px
+		transition: all 0.2s ease-in-out;
+
+
+		p
+			font-weight 400
+			border-left 1px solid #fff
+			border-left 1px solid rgba(255,255,255,0.35)
+			color #fff
+			font-size 16px
+			left 0
+			margin 0
+			position absolute
+			text-align center
+			top 10px
+			width 100%
+
+.facebook
+	iframe
+		display block
+		position absolute
+		margin 10px auto
+		z-index 1
+		
+.twitter
+.github 
+	iframe
+		width 90px !important
+		right 5px
+		top 10px
+		z-index 1
+		display block
+		position absolute
+		
+.github
+	iframe
+		left 67px 
+
+.facebook:hover .slide
+	left 150px
+
+.twitter:hover .slide
+	left 150px
+	
+.github:hover .slide
+	left 150px
+
+.facebook .icon, .facebook .slide
+	background #305c99
+
+.twitter .icon, .twitter .slide
+	background azul
+	
+.github .icon, .github .slide
+	background fondo-claro
+	
+	
+@media screen and (min-width: 767px)
+	.wrap
+		overflow hidden
+		padding 1em
+		
+	.padding-top
+		padding-top 3em
+		
+	.titles
+		strong
+			font-size 4em
+			
+			
+	.cover
+		height 500px
+		
+	.info_cover
+		.name_fili
+			font-size 2.2em
+		.social_cover
+			a
+				font-size 2em
+					
+		.especialidad
+			span
+				font-size 2em
+				
+	.art_me
+		text-align left
+	.art
+		width 44%
+		display inline-block
+		vertical-align top
+		&:nth-child(odd)
+			margin-right 2%
+			
+	.projets
+		text-align right
+		h3
+			font-size 3em
+		
+		strong
+			font-size 2em
+			
+		.icons_projets
+			span
+				font-size 2.3em
+				
+	.title_projet
+		margin 0 auto
+		text-align start
+		width 318px
+		position relative
+		.f_projet
+			display inline-block
+			margin-right 0.5em
+							
+		.text_projet
+			display inline-block
+			position absolute
+			top 0.6em
+			font-size 1.5em
+			margin-top 0
+			
+			strong
+				padding-right 0.5em
+			span
+				padding-left 0
+				
+	.presentations
+		.buttons
+			a
+				width 35%
+				display inline-block
+				&:nth-child(odd)
+					margin-right 2%
+					
+	.sites_title
+		font-size 1.5em
+		strong
+			padding-right 0.5em
+
+		span
+			padding-left 0
+					
+	.sites
+		.content_sites
+			width 42%
+			display inline-block
+			&:nth-child(odd)
+				margin-right 13%
+				
+	.contact
+		text-align left
+		h3
+			font-size 3em
+		
+		strong
+			font-size 2em
+			
+	.button
+		float left
+		&:nth-child(-n+3)
+			margin-right 1em
+						
+	.content_share
+		h3
+			float left
+			font-size 1.2em
+			margin 0.5em 0 1em 0
+		.buttons
+			float right
+			
+			
+@media screen and (min-width: 1080px)
+	.button_fixed
+		display none
+		
+		
+	.button_up
+		background rgba($bg-button,0.3)
+		position fixed
+		z-index 998
+		display block
+		right 1em
+		bottom 1em
+		padding 0.5em
+		border-radius 7px
+		border 2px solid black
+		
+		a
+			font-size 2em
+			color fondo
+			&:hover
+				color $tertiary-color
+		
+	header
+		background fondo
+		position relative
+		display block
+
+	.wrap
+		max-width 1080px
+		margin 0 auto
+		
+	.padding-top
+		padding-top 5em
+		
+		
+	.menu
+		text-align center
+		background rgba($bg-button,0)
+		z-index 20
+		position absolute
+		padding 0
+		top 0.5em
+		left 0
+		right 0
+		width 98%
+		
+	.list
+		.item
+			display inline-block
+			padding 0.7em
+			
+	.cover
+		.fili
+			animation drop 1.5s
+			
+	.info_cover
+		animation text-fade 1.8s
+		.social_cover
+			a
+				&:nth-child(1)
+					animation text-fade 2s
+				&:nth-child(2)
+					animation text-fade 2.2s
+				&:nth-child(3)
+					animation text-fade 2.4s
+				&:nth-child(4)
+					animation text-fade 2.6s
+				&:nth-child(5)
+					animation text-fade 2.8s
+					animation aumentar 2.7s 
+				&:nth-child(6)
+					animation text-fade 2.6s
+				&:nth-child(7)
+					animation text-fade 2.4s
+				&:nth-child(8)
+					animation text-fade 2.2s
+				&:nth-child(9)
+					animation text-fade 2s
+					
+	.img_header
+		img
+			width 60px
+			
+	.menu-list
+		display none
+				
+
+	.titles
+		strong
+			font-size 5em
+			
+		p
+			font-size 1.3em
+			
+	.art
+		width 30%
+		vertical-align top
+		margin-right 0 !important	
+			
+	.projets
+		h3
+			font-size 4em
+			
+		strong
+			font-size 3em
+			
+		p
+			font-size 1.3em
+			
+		.icons_projets
+			span
+				font-size 2.5em
+				
+	.presentations
+		.buttons
+			a
+				font-size 1.5em
+				
+	.sites
+		.content_sites
+			.f_sites
+				height 300px
+				img
+					margin-top 4.7em
+			.info_sites
+				height 0
+				
+			&:hover .f_sites
+				height 210px
+				
+			&:hover .info_sites
+				height 90px
+				
+			&:hover .img_sites
+				margin-top 2.5em
+	
+	.contact
+		h3
+			font-size 4em
+			
+		strong
+			font-size 3em
+			
+		p
+			font-size 1.3em
+			
+	.hi-icon-effect-6 .hi-icon:hover:before
+		animation vueltas 1.3s linear infinite
+			
+	.content_share
+		h3
+			font-size 2em
+			margin 0
+			
+			
+	@keyframes vueltas
+		0%
+			transform rotate(0deg)
+		100%
+			transform rotate(360deg)
+
+	@keyframes drop
+		0%
+			margin-top -300px
+			
+		40%, 51%, 90%
+			margin-top 0
+			
+		42%, 48%
+			margin-top 3px
+			
+		45%
+			margin-top -1px
+		
+	@keyframes text-fade
+		0%, 20%, 40%
+			opacity 0
+			
+		60% 
+			opacity 0.6
+			
+		80%
+			opacity 0.8
+			
+		100%
+			opacity 1
+			
+	@keyframes aumentar
+		0%
+			transform scale(2.5)
+			
+		50%
+			transform scale(2)
+			
+		100%
+			transform scale(1)
+
