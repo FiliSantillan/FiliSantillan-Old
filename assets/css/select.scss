@@ -1,0 +1,221 @@
+
+/*
+    Based on great Codrops article
+    http://tympanus.net/Development/SelectInspiration/index4.html
+    with changes..
+*/
+// in _settings.scss there are all variables used here
+@import "settings";
+
+.cs-select {
+    display: inline-block;
+    vertical-align: middle;
+    position: relative;
+    text-align: left;
+    background: #fff;
+    z-index: 1000;
+    width: 100%;
+    height: rem-calc(40);
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    margin-top: rem-calc(-5);
+    &:focus {
+        outline: none;
+    }
+    select {
+        display: none;
+    }
+    span {
+        display: block;
+        position: relative;
+        cursor: pointer;
+        padding: 0 rem-calc(16);
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+    > span {
+        padding-left: rem-calc(30);
+        &::after {
+            speak: none;
+            position: absolute;
+            top: 50%;
+            -webkit-transform: translateY(-50%);
+            -ms-transform: translateY(-50%);
+            transform: translateY(-50%);
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            content: '\25BE';
+            left: 0;
+        }
+    }
+    .cs-selected {
+        span {
+            &::after {
+                speak: none;
+                position: absolute;
+                top: 50%;
+                -webkit-transform: translateY(-50%);
+                -ms-transform: translateY(-50%);
+                transform: translateY(-50%);
+                -webkit-font-smoothing: antialiased;
+                -moz-osx-font-smoothing: grayscale;
+                content: '\2713';
+                margin-left: rem-calc(16);
+            }
+        }
+    }
+    &.cs-active {
+        z-index: 2000;
+        > span {
+            &::after {
+                -webkit-transform: translateY(-50%) rotate(180deg);
+                -ms-transform: translateY(-50%) rotate(180deg);
+                transform: translateY(-50%) rotate(180deg);
+            }
+        }
+        .cs-options {
+            visibility: visible;
+        }
+    }
+    .cs-options {
+        position: absolute;
+        overflow: hidden;
+        width: 100%;
+        background: $color-main-light;
+        visibility: hidden;
+    }
+    ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        span {
+            padding: rem-calc(16);
+        }
+        li {
+            &.cs-focus {
+                span {
+                    background-color: $color-main-dark;
+                }
+            }
+            &.cs-optgroup {
+                ul {
+                    padding-left: rem-calc(16);
+                }
+                > span {
+                    cursor: default;
+                }
+            }
+        }
+    }
+}
+
+.cs-skin-slide {
+    color: $color-main-dark;
+    font-size: rem-calc(24);
+    &.cs-active {
+        border: 0;
+        > span {
+            text-indent: rem-calc(-290);
+            opacity: 0;
+            &::after {
+                font-family: 'FontAwesome';
+                content: '\f0c9';
+                color: $color-main-contrast;
+                -webkit-backface-visibility: hidden;
+                backface-visibility: hidden;
+                -webkit-transform: translate3d(0, -50%, 0);
+                -ms-transform: translate(0, -50%);
+                transform: translate3d(0, -50%, 0);
+            }
+        }
+        .cs-options {
+            li {
+                opacity: 1;
+            }
+        }
+    }
+    > span {
+        height: rem-calc(40);
+        line-height: rem-calc(40);
+        -webkit-transition: text-indent 0.3s, opacity 0.3s;
+        transition: text-indent 0.3s, opacity 0.3s;
+        font-size: rem-calc(16);
+        font-weight: 400;
+        text-transform: uppercase;
+        &::after {
+            font-family: 'FontAwesome';
+            content: '\f0c9';
+            color: $color-main-contrast;
+            -webkit-backface-visibility: hidden;
+            backface-visibility: hidden;
+            font-size: rem-calc(26);
+        }
+    }
+    .cs-options {
+        height: auto;
+        max-height: 650%;
+        overflow-y: auto;
+        top: 50%;
+        left: 50%;
+        bottom: auto;
+        right: auto;
+        padding-top: rem-calc(10);
+        padding-bottom: rem-calc(10);
+        -webkit-transform: translate3d(-50%, -50%, 0);
+        -ms-transform: translate(-50%, -50%);
+        transform: translate3d(-50%, -50%, 0);
+        box-shadow: 0 0 rem-calc(15) rgba($color-main-dark, .15);
+        background: $color-main-light;
+        &::-webkit-scrollbar {
+            width: rem-calc(6);
+        }
+        &::-webkit-scrollbar-track {
+            background-color: transparent;
+            background-color: lighten($color-main-light, 5%);
+        }
+        &::-webkit-scrollbar-thumb {
+             background-color: $color-main-contrast;
+        }
+        li {
+            opacity: 0;
+            -webkit-transition: opacity 1s;
+            transition: opacity 1s;
+            span {
+                text-transform: uppercase;
+                font-weight: 400;
+                letter-spacing: rem-calc(2);
+                font-size: 85%;
+                padding: rem-calc(5) rem-calc(20);
+                &:hover {
+                    color: $color-main-contrast;
+                    background: transparent;
+                }
+            }
+            &.cs-focus {
+                span {
+                    color: $color-main-contrast;
+                    background: transparent;
+                }
+            }
+            &.cs-selected {
+                span {
+                    color: $color-main-contrast;
+                    background: transparent;
+                }
+            }
+        }
+    }
+    .cs-selected {
+        span {
+            &::after {
+                content: '';
+            }
+        }
+    }
+}

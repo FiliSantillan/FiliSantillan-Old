@@ -1,0 +1,40 @@
+
+// main rem font base and rem calc function
+$rem-base: 16 !default;
+@function rem-calc($pxWidth) {
+  @return $pxWidth / $rem-base * 1rem;
+}
+
+$row-max-width: rem-calc(1200);
+
+// font family
+$main-font: 'Lato', sans-serif;
+$main-font-weight: 200;
+
+$headers-font: 'Raleway', sans-serif;
+$headers-weight: 900;
+$headers-transform: none;
+
+// colors
+
+$color-main-dark: #23222D;
+$color-main-light: #ffffff;
+$color-main-contrast: #FF4D4D;
+$color-headers: $color-main-dark;
+
+// custom theme mixins
+// example:
+// clearfix usage:
+//  .some-div {
+//      ...
+//      @extend %clearfix;
+//  }
+
+%clearfix {
+    &:before,
+    &:after {
+        content: "";
+        display: table;
+        clear: both;
+    }
+}

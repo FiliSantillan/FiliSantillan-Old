@@ -1,0 +1,146 @@
+{{!-- here we have common view for post and static page details --}}
+
+{{#if @blog.navigation}}
+<div class="post-view-menu-bars js-open-main-menu">
+    <i class="fa fa-bars"></i>
+</div>
+{{/if}}
+
+{{! Everything inside the #post tags pulls data from the post }}
+{{#post}}
+<div class="post-view">
+    <aside class="post-view-sidebar scene-element fade-in-left" {{#if image}}style="background-image: url({{image}});"{{else}}{{#if @blog.cover}}style="background-image: url({{@blog.cover}});"{{/if}}{{/if}}>
+        <div class="post-view-elems">
+            <div class="post-view-elems-header">
+                {{#if @blog.logo}}
+                    <a class="blog-logo" href="{{@blog.url}}">
+                        <img src="{{@blog.logo}}" alt="Blog Logo">
+                    </a>
+                {{else}}
+                    <a href="{{@blog.url}}" class="header-back-btn">
+                        <i class="fa fa-chevron-left"></i> Home
+                    </a>
+                {{/if}}
+                 <div class="post-view-menu-bars-mobile js-open-main-menu">
+                    <i class="fa fa-bars"></i>
+                </div>
+            </div>
+            <div class="post-view-elems-body">
+                {{!-- for post view only --}}
+                {{#is "post"}}
+                    <div class="post-reading-time js-post-reading-time">
+                        <progress value="0" class="read-progress-indicator single">
+                            <div class="progress-container">
+                                <span class="progress-bar"></span>
+                            </div>
+                        </progress>
+                        {{!-- read progress indicator --}}
+                        <div class="read-estimation">
+                            <div class="read-estimation-content">
+                                <div class="title">{{title}}</div>
+                                <div class="estimated-time">
+                                    <span class="js-word-count"></span> words - <span class="eta"></span> read.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="post-view-elems-share">
+                        <a class="icon-twitter" href="https://twitter.com/share?text={{encode title}}&amp;url={{url absolute="true"}}"
+                            onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-square fa-stack-2x fa-inverse"></i>
+                                <i class="fa fa-twitter fa-stack-1x"></i>
+                            </span>
+                        </a>
+                        <a class="icon-facebook" href="https://www.facebook.com/sharer/sharer.php?u={{url absolute="true"}}"
+                            onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-square fa-stack-2x fa-inverse"></i>
+                                <i class="fa fa-facebook fa-stack-1x"></i>
+                            </span>
+                        </a>
+                        <a class="icon-google-plus" href="https://plus.google.com/share?url={{url absolute="true"}}"
+                           onclick="window.open(this.href, 'google-plus-share', 'width=490,height=530');return false;">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-square fa-stack-2x fa-inverse"></i>
+                                <i class="fa fa-google-plus fa-stack-1x"></i>
+                            </span>
+                        </a>
+                    </div>
+                {{/is}}
+                {{!-- here will land your recent posts --}}
+                {{!-- you can change items amout here --}}
+                <div class="post-recent-list js-post-view-recent" data-items="6">
+                    <div class="post-recent-list-label">
+                        <span>Recent Posts</span>
+                    </div>
+                    <div class="post-recent-list-separator"></div>
+                </div>
+            </div>
+        </div>
+    </aside>
+    <main class="post-view-content scene-element fade-in-right" role="main">
+        <div class="post-view-right-container">
+            <article class="post-view-article {{post_class}}">
+                <section class="post-content row">
+                    <div class="small-12 columns">
+                        <div class="post-header-content">
+                            {{#is "post"}}
+                                <section class="post-meta js-bg-check">
+                                    <time class="post-date" datetime="{{date format='YYYY-MM-DD'}}">{{date format="DD MMM YYYY"}}</time>
+                                </section>
+                            {{/is}}
+                            <h1 class="post-title">{{title}}</h1>
+                            <div class="post-title-separator"></div>
+                        </div>
+                        <div class="post-article-content">
+                            {{content}}
+                        </div>
+                    </div>
+                </section>
+                {{#is "post"}}
+                    {{#if tags}}
+                        <section class="row">
+                            <div class="small-12 columns">
+                                <div class="post-tags">
+                                    {{#foreach tags}}
+                                        <a href="{{url}}">
+                                            {{name}}
+                                        </a>
+                                    {{/foreach}}
+                                </div>
+                            </div>
+                        </section>
+                    {{/if}}
+                    {{! Everything inside the #author tags pulls data from the author }}
+                    {{#author}}
+                        <section class="author-info">
+                            <div class="row">
+                                <section class="post-author small-12 columns">
+                                    {{#if image}}
+                                        <img src="{{image}}" class="post-author-avatar" alt="{{name}}">
+                                    {{/if}}
+                                    {{#if name}}
+                                        <span class="author-label">Author</span>
+                                        <h1><a href="{{url}}" class="author-link-name">{{name}}</a></h1>
+                                    {{/if}}
+                                    {{#if website}}
+                                        <p><a href="{{website}}" class="author-website">{{website}}</a></p>
+                                    {{/if}}
+                                    {{#if bio}}
+                                        <p>{{bio}}</p>
+                                    {{/if}}
+                                </section>
+                            </div>
+                        </section>
+                    {{/author}}
+
+                    {{!-- remember to set up your disqus uniq disqus_shortname variable in anima.js file --}}
+                    {{> "disqus"}}
+
+                {{/is}}
+            </article>
+        </div>
+    </main>
+</div>
+{{/post}}

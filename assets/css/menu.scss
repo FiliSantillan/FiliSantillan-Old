@@ -1,0 +1,204 @@
+/*
+    Based on great Codrops article
+    http://tympanus.net/Development/OffCanvasMenuEffects/sideslide.html
+    with changes..
+*/
+// in _settings.scss there are all variables used here
+@import "settings";
+
+.menu-container,
+.content-wrap {
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+}
+
+.menu-container {
+    .menu-wrap {
+        position: fixed;
+        top: 0;
+        right: 0;
+        z-index: 1001;
+        width: rem-calc(300);
+        height: 100%;
+        background: $color-main-dark;
+        padding: 2.5em 1.5em 0;
+        font-size: 1.15em;
+        -webkit-transform: translate3d(100%, 0, 0);
+        -ms-transform: translate(100%, 0);
+        transform: translate3d(100%, 0, 0);
+        -webkit-transition: -webkit-transform 0.4s;
+        -ms-transition: -ms-transform 0.4s;
+        transition: transform 0.4s;
+        -webkit-transition-timing-function: cubic-bezier(0.7, 0, 0.3, 1);
+        -ms-transition-timing-function: cubic-bezier(0.7, 0, 0.3, 1);
+        transition-timing-function: cubic-bezier(0.7, 0, 0.3, 1);
+        a {
+            color: $color-main-light;
+        }
+        a:hover, a:focus {
+            color: darken($color-main-light, 20%);
+        }
+        .close-button {
+            width: 1em;
+            height: 1em;
+            position: absolute;
+            right: rem-calc(15);
+            top: rem-calc(25);
+            overflow: hidden;
+            text-indent: 1em;
+            font-size: 0.75em;
+            border: none;
+            background: transparent;
+            color: transparent;
+            outline: none;
+            &::before,
+            &::after {
+                content: '';
+                position: absolute;
+                width: 3px;
+                height: 100%;
+                top: 0;
+                left: 50%;
+                background: $color-main-light;
+            }
+            &::before {
+                -webkit-transform: rotate(45deg);
+                -ms-transform: rotate(45deg);
+                transform: rotate(45deg);
+            }
+            &::after {
+                -webkit-transform: rotate(-45deg);
+                -ms-transform: rotate(-45deg);
+                transform: rotate(-45deg);
+            }
+        }
+    }
+}
+
+.menu {
+    margin-top: 30%;
+}
+
+.menu,
+.icon-list {
+    height: 100%;
+}
+.icon-list {
+    -webkit-transform: translate3d(0, 100%, 0);
+    -ms-transform: translate(0, 100%);
+    transform: translate3d(0, 100%, 0);
+    -webkit-transition: -webkit-transform 0s 0.4s;
+    -ms-transition: -webkit-transform 0s 0.4s;
+    transition: transform 0s 0.4s;
+    -webkit-transition-timing-function: cubic-bezier(0.7, 0, 0.3, 1);
+    transition-timing-function: cubic-bezier(0.7, 0, 0.3, 1);
+    a {
+        display: block;
+        padding: 0.8em;
+        -webkit-transform: translate3d(0, rem-calc(500), 0);
+        -ms-transform: translate(0, rem-calc(500));
+        transform: translate3d(0, rem-calc(500), 0);
+        -webkit-transition: -webkit-transform 0s 0.4s;
+        -ms-transition: -ms-transform 0s 0.4s;
+        transition: transform 0s 0.4s;
+        -webkit-transition-timing-function: cubic-bezier(0.7, 0, 0.3, 1);
+        transition-timing-function: cubic-bezier(0.7, 0, 0.3, 1);
+        &:nth-child(2) {
+            -webkit-transform: translate3d(0, rem-calc(1000), 0);
+            -ms-transform: translate(0, rem-calc(1000));
+            transform: translate3d(0, rem-calc(1000), 0);
+        }
+        &:nth-child(3) {
+            -webkit-transform: translate3d(0, rem-calc(1500), 0);
+            -ms-transform: translate(0, rem-calc(1500));
+            transform: translate3d(0, rem-calc(2000), 0);
+        }
+        &:nth-child(4) {
+            -webkit-transform: translate3d(0, rem-calc(2000), 0);
+            -ms-transform: translate(0, rem-calc(2000));
+            transform: translate3d(0, rem-calc(3000), 0);
+        }
+        &:nth-child(5) {
+            -webkit-transform: translate3d(0, rem-calc(2500), 0);
+            -ms-transform: translate(0, rem-calc(2500));
+            transform: translate3d(0, rem-calc(4000), 0);
+        }
+        &:nth-child(6) {
+            -webkit-transform: translate3d(0, rem-calc(3000), 0);
+            -ms-transform: translate(0, rem-calc(3000));
+            transform: translate3d(0, rem-calc(5000), 0);
+        }
+        span {
+            margin-left: rem-calc(10);
+            font-weight: 700;
+        }
+        &:hover, &:active, &:focus {
+            text-decoration: none;
+        }
+    }
+}
+
+.show-menu {
+    .menu-wrap {
+        -webkit-transform: translate3d(0, 0, 0);
+        -ms-transform: translate(0, 0);
+        transform: translate3d(0, 0, 0);
+        -webkit-transition: -webkit-transform 0.8s;
+        -ms-transition: -ms-transform 0.8s;
+        transition: transform 0.8s;
+        -webkit-transition-timing-function: cubic-bezier(0.7, 0, 0.3, 1);
+        transition-timing-function: cubic-bezier(0.7, 0, 0.3, 1);
+    }
+    .icon-list,
+    .icon-list a {
+        -webkit-transform: translate3d(0, 0, 0);
+        -ms-transform: translate(0, 0);
+        transform: translate3d(0, 0, 0);
+        -webkit-transition: -webkit-transform 0.8s;
+        -ms-transition: -ms-transform 0.8s;
+        transition: transform 0.8s;
+        -webkit-transition-timing-function: cubic-bezier(0.7, 0, 0.3, 1);
+        transition-timing-function: cubic-bezier(0.7, 0, 0.3, 1);
+    }
+    .icon-list a {
+        -webkit-transition-duration: 0.9s;
+        transition-duration: 0.9s;
+    }
+}
+
+.menu-overlay {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 999;
+    display: none;
+    background-color: transparent;
+    &.visible {
+        display: block;
+    }
+}
+
+// menu hacks for old android buggy behaviour
+html[data-useragent*='Android 4.0'],
+html[data-useragent*='Android 4.1'],
+html[data-useragent*='Android 4.2'] {
+    .menu-container {
+        .menu-wrap {
+            right: rem-calc(-320) !important;
+            -webkit-transform: none !important;
+            transform: none !important;
+        }
+    }
+    .show-menu {
+        .menu-wrap {
+            right: 0 !important;
+        }
+    }
+    .icon-list {
+        -webkit-transform: none !important;
+        transform: none !important;
+    }
+}
