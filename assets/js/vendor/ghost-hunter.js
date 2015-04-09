@@ -30,7 +30,7 @@
         rss                 : "/rss",
         onKeyUp             : false,
         result_template     : "<a href='{{link}}'><p><h2>{{title}}</h2><h4>{{pubDate}}</h4></p></a>",
-        info_template       : "<p>Number of posts found: {{amount}}</p>",
+        info_template       : "<p>Resultados: {{amount}}</p>",
         displaySearchInfo   : true,
         zeroResultsInfo     : true,
         before              : false,

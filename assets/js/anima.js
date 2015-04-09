@@ -291,7 +291,7 @@ var anima = (function ($) {
                 });
                 tags = unicArray(tags).filter(Boolean);
             }
-            $tagsList.append('<option value="all">All</option>');
+            $tagsList.append('<option value="all">Todo</option>');
             tags.forEach(function (tag) {
                 $tagsList.append('<option value="' + tag + '">' + tag + '</option>');
             });
@@ -340,7 +340,7 @@ var anima = (function ($) {
         if ($('#disqus_thread').length) {
             if (typeof DISQUS === 'undefined') {
                 /* * * CONFIGURATION VARIABLES * * */
-                var disqus_shortname = 'animatheme'; // required: replace example with your forum shortname
+                var disqus_shortname = 'filisantillan'; // required: replace example with your forum shortname
                 var disqus_identifier = newIdentifier;
                 var disqus_url = newUrl;
                 var disqus_title = newTitle;
