@@ -44,7 +44,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="post-view-elems-share">
+                    {{!-- <div class="post-view-elems-share">
                         <a class="icon-facebook" href="https://www.facebook.com/sharer/sharer.php?u={{url absolute="true"}}"
                             onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;">
                             <span class="fa-stack fa-lg">
@@ -66,7 +66,7 @@
                                 <i class="fa fa-google-plus fa-stack-1x"></i>
                             </span>
                         </a>
-                    </div>
+                    </div> --}}
                 {{/is}}
                 {{!-- here will land your recent posts --}}
                 {{!-- you can change items amout here --}}
@@ -92,9 +92,64 @@
                             {{/is}}
                             <h1 class="post-title">{{title}}</h1>
                             <div class="post-title-separator"></div>
+                            <div class="post-view-elems-share">
+                                <a class="icon-facebook" href="https://www.facebook.com/sharer/sharer.php?u={{url absolute="true"}}"
+                                    onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;">
+                                    <span class="fa-stack fa-lg">
+                                        <i class="fa fa-facebook-square fa-stack-2x"></i>
+                                    </span>
+                                </a>
+                                <a class="icon-twitter" href="https://twitter.com/share?text={{encode title}}&amp;url={{url absolute="true"}}"
+                                    onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
+                                    <span class="fa-stack fa-lg">
+                                        
+                                        <i class="fa fa-twitter-square fa-stack-2x"></i>
+                                    </span>
+                                </a>
+                                <a class="icon-linkedin" href="https://www.linkedin.com/cws/share?url={{url absolute="true"}}"
+                                        onclick="window.open(this.href, 'linkedin-share','width=580,height=296');return false;">
+                                    <span class="fa-stack fa-lg">
+                                        <i class="fa fa-linkedin-square fa-stack-2x"></i>
+                                    </span>
+                                </a>
+                                <a class="icon-google-plus" href="https://plus.google.com/share?url={{url absolute="true"}}"
+                                   onclick="window.open(this.href, 'google-plus-share', 'width=490,height=530');return false;">
+                                    <span class="fa-stack fa-lg">
+                                        <i class="fa fa-google-plus-square fa-stack-2x"></i>
+                                    </span>
+                                </a>
+                            </div> 
                         </div>
                         <div class="post-article-content">
                             {{content}}
+                            <h3 style="">¿Te gusto el artículo?, por favor, ayudame a compartir para que otras personas puedan leerlo.</h3>
+                            <div class="post-view-elems-share">
+                                <a class="icon-facebook" href="https://www.facebook.com/sharer/sharer.php?u={{url absolute="true"}}"
+                                        onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;">
+                                    <span class="fa-stack fa-lg">
+                                        <i class="fa fa-facebook-square fa-stack-2x"></i>
+                                    </span>
+                                </a>
+                                <a class="icon-twitter" href="https://twitter.com/share?text={{encode title}}&amp;url={{url absolute="true"}}"
+                                        onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
+                                    <span class="fa-stack fa-lg">
+                                            
+                                        <i class="fa fa-twitter-square fa-stack-2x"></i>
+                                    </span>
+                                </a>
+                                <a class="icon-linkedin" href="https://www.linkedin.com/cws/share?url={{url absolute="true"}}"
+                                        onclick="window.open(this.href, 'linkedin-share','width=580,height=296');return false;">
+                                    <span class="fa-stack fa-lg">
+                                        <i class="fa fa-linkedin-square fa-stack-2x"></i>
+                                    </span>
+                                </a>
+                                <a class="icon-google-plus" href="https://plus.google.com/share?url={{url absolute="true"}}"
+                                       onclick="window.open(this.href, 'google-plus-share', 'width=490,height=530');return false;">
+                                    <span class="fa-stack fa-lg">
+                                            <i class="fa fa-google-plus-square fa-stack-2x"></i>
+                                    </span>
+                                </a>
+                            </div>
                         </div>
                     </div>
                 </section>
@@ -121,8 +176,8 @@
                                         <img src="{{image}}" class="post-author-avatar" alt="{{name}}">
                                     {{/if}}
                                     {{#if name}}
-                                        <span class="author-label">Escrito por:</span>
-                                        <h1><a href="{{url}}" class="author-link-name">{{name}}</a></h1>
+                                        <span class="author-label">Autor</span>
+                                        <h3><a href="{{url}}" class="author-link-name">{{name}}</a></h3>
                                     {{/if}}
                                     {{#if website}}
                                         <p><a href="{{website}}" class="author-website">{{website}}</a></p>
@@ -140,6 +195,7 @@
 
                 {{/is}}
             </article>
+            {{> "footer"}}
         </div>
     </main>
 </div>
