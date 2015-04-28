@@ -365,3 +365,11 @@
     @media only screen and (min-width: 40.063em) {
       .author-info .post-author {
         text-align: left; } }
+
+.post-view-facebook{
+  display: none;
+}
+
+@media only screen and (min-width: 62.5em) {
+  .post-view-facebook{
+  display: inline-block;} }

@@ -122,7 +122,17 @@ a.button {
     -ms-transform: translate(0, -100%);
     transform: translate3d(0, -100%, 0); }
   .headroom .headroom-logo img {
-    max-height: 3.125rem; }
+    max-height: 3.125rem;
+    float: left; }
+  .headroom .headroom-logo a strong {
+    font-size: 2.3em;
+    color: white;
+    margin-left: 0.5em;
+    display: none;}
+
+  @media only screen and (min-width: 48em) {
+    .headroom .headroom-logo a strong {
+    display: inline-block;} }
   .headroom .headeroom-icons {
     line-height: 3.125rem;
     font-size: 2.25rem; }
@@ -660,18 +670,55 @@ html.no-csstransforms3d .headroom {
   background-color: #23222d;
   text-align: center;
   color: #b3b3b3;
-  padding-top: 5rem;
-  padding-bottom: 5rem; }
+  padding: 2rem; }
   .footer .footer-social-icons a {
     color: #23222d; }
     .footer .footer-social-icons a:hover, .footer .footer-social-icons a:focus, .footer .footer-social-icons a:active {
       color: #23222d; }
-  .footer .footer-poweredby {
-    margin-top: 0.625rem; }
-    .footer .footer-poweredby a {
-      color: #b3b3b3; }
-      .footer .footer-poweredby a:hover, .footer .footer-poweredby a:focus, .footer .footer-poweredby a:active {
-        color: #b3b3b3; }
+  .footer .footer-info strong {
+    font-size:  1.5em;
+  }
+  .footer .footer-info p {
+    font-size:  1.2em;
+    border-bottom: 2px solid white;
+    padding-bottom: 0.5em;
+  }
+  .footer .footer-tools{
+    margin-top: 1em;
+  }
+
+  .footer .footer-tools img:last-child{
+    margin-left: 1.5em;
+  }
+
+  .footer .footer-final .creativecommons span{
+    width: 200px;
+  }
+
+@media only screen and (min-width: 48em){
+  .footer{
+    overflow: hidden;
+  }
+  .footer .footer-content-left{
+    float: left;
+    vertical-align: top;
+  }
+  .footer .footer-content-right{
+    float: right;
+    vertical-align: top;
+  }
+
+  .footer .footer-tools{
+    margin-top: 0;
+  }
+}
+
+@media only screen and (min-width: 64em) {
+  .wrap-center{
+    margin: 0 auto;
+    max-width: 64em;
+  }
+}
 
 .pagination {
   margin-top: 3.4375rem;

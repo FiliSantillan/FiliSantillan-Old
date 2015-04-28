@@ -12,15 +12,9 @@
     <aside class="post-view-sidebar scene-element fade-in-left" {{#if image}}style="background-image: url({{image}});"{{else}}{{#if @blog.cover}}style="background-image: url({{@blog.cover}});"{{/if}}{{/if}}>
         <div class="post-view-elems">
             <div class="post-view-elems-header">
-                {{#if @blog.logo}}
-                    <a class="blog-logo" href="{{@blog.url}}">
-                        <img src="{{@blog.logo}}" alt="Blog Logo">
-                    </a>
-                {{else}}
-                    <a href="{{@blog.url}}" class="header-back-btn">
-                        <i class="fa fa-chevron-left"></i> Inicio
-                    </a>
-                {{/if}}
+                <a href="{{@blog.url}}" class="header-back-btn">
+                    <i class="fa fa-chevron-left"></i> Inicio
+                </a>
                  <div class="post-view-menu-bars-mobile js-open-main-menu">
                     <i class="fa fa-bars"></i>
                 </div>
@@ -75,6 +69,9 @@
                         <span>Posts Recientes</span>
                     </div>
                     <div class="post-recent-list-separator"></div>
+                </div>
+                <div class="post-view-facebook">
+                    <iframe src="//www.facebook.com/plugins/likebox.php?href=http%3A%2F%2Fwww.facebook.com/FiliSantillanMX&amp;width=270&amp;height=200&amp;colorscheme=dark&amp;show_faces=true&amp;header=false&amp;stream=false&amp;show_border=false&amp;appId=539759132770284" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:250px; height:258px;" allowtransparency="true"></iframe>
                 </div>
             </div>
         </div>
