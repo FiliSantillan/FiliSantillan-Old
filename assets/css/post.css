@@ -207,7 +207,7 @@
         width: 100%;
         max-width: 57.5rem;
         padding: 3.75rem 0; }
-        .post-view .post-view-content .post-view-right-container .post-view-article .post-article-content p{
+        .post-view .post-view-content .post-view-right-container .post-view-article .post-article-content p, ul{
           font-size: 1.1rem;
         }
         .post-view .post-view-content .post-view-right-container .post-view-article .post-article-content p a,
