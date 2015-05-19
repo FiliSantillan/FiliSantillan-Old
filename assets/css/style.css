@@ -801,6 +801,35 @@ html.no-csstransforms3d .headroom {
   font-size: 1.5em;
 }
 
+.subscribers{
+  background: #E5E5E5;
+  padding: 1em 2em;
+  text-align: center;
+  border-radius: 5px;
+  max-width: 64em;
+  margin: 0 auto;
+}
+
+.subscribers input[type="text"], .subscribers input[type="email"]{
+  padding: 1.4em 1.4em!important;
+  font-size: 18px;
+}
+
+.subscribers input[type="text"]:focus, .subscribers input[type="email"]:focus{
+  border: 1px solid #F4483A;
+}
+
+.subscribers input[type="submit"]{
+  font-size: 18px;
+  transition: 0.3s;
+  margin-top: 1em;
+}
+
+.subscribers input[type="submit"]:hover{
+  transform: scale(1.2);
+  background: #F4483A;
+}
+
 /* Resolution iphone*/
 
 @media only screen and (min-width: 320px){
