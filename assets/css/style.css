@@ -803,7 +803,7 @@ html.no-csstransforms3d .headroom {
 
 .subscribers{
   background: #E5E5E5;
-  padding: 1em 2em;
+  padding: 0.5em 2em;
   text-align: center;
   border-radius: 5px;
   max-width: 64em;
