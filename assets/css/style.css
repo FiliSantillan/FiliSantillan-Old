@@ -253,8 +253,12 @@ html.no-csstransforms3d .headroom {
     background-repeat: no-repeat;
     background-color: #23222d; }
     .big-header-container .main-header .main-header-content {
-      padding-top: 9.375rem;
-      padding-bottom: 3.75rem; }
+      padding-top: 5.375rem;
+      padding-bottom: 1.75rem; }
+
+    .big-header-container .main-header .main-header-content p{
+          font-size: 1em !important;
+          width: 100% !important; }
       .big-header-container .main-header .main-header-content .blog-logo img {
         max-width: 7.5rem; }
     .big-header-container .main-header .page-title {
@@ -263,13 +267,22 @@ html.no-csstransforms3d .headroom {
       font-size: 2.875rem; }
       @media only screen and (min-width: 48em) {
         .big-header-container .main-header .page-title {
-          font-size: 3.75rem; } }
+          font-size: 3.75rem; } 
+        .big-header-container .main-header .main-header-content {
+          padding-top: 5.375rem;
+          padding-bottom: 2.75rem; }
+
+        .big-header-container .main-header .main-header-content p{
+          font-size: 1.1em !important;
+          width: 70% !important; }
+        }
       @media only screen and (min-width: 64em) {
         .big-header-container .main-header .page-title {
           font-size: 5rem; } }
     .big-header-container .main-header .page-description {
       font-weight: 400;
       color: white; }
+
     .big-header-container .main-header .main-header-logo-container .main-header-logo img {
       max-height: 6.25rem; }
     .big-header-container .main-header .main-header-bars {
@@ -696,6 +709,20 @@ html.no-csstransforms3d .headroom {
     width: 200px;
   }
 
+  .view{
+    display: none;
+  }
+
+  .follow{
+    text-align: center;
+  }
+
+  .follow a i{
+    font-size: 1.7em !important;
+    color: #1A1A21;
+    margin-left: 0.3em;
+  }
+
 @media only screen and (min-width: 48em){
   .footer{
     overflow: hidden;
@@ -711,6 +738,20 @@ html.no-csstransforms3d .headroom {
 
   .footer .footer-tools{
     margin-top: 0;
+  }
+
+  .view{
+    display: block;
+  }
+
+  .follow{
+    text-align: left;
+  }
+
+  .follow a i{
+    font-size: 2.5em !important;
+    color: #1A1A21;
+    margin-left: 0.3em;
   }
 
 }
@@ -749,54 +790,6 @@ html.no-csstransforms3d .headroom {
       font-size: 0.75rem;
       margin-right: 0.3125rem; }
 
-.fa-facebook-square{
-  color: #3b5998;
-  opacity: 0.9;
-  transform: scale(1);
-  transition: 0.3s;
-}
-
-.fa-facebook-square:hover{
-  opacity: 1;
-  transform: scale(1.2);
-}
-
-.fa-twitter-square{
-  color: #00aced;
-  opacity: 0.9;
-  transform: scale(1);
-  transition: 0.3s;
-}
-
-.fa-twitter-square:hover{
-  opacity: 1;
-  transform: scale(1.2);
-}
-
-.fa-google-plus-square{
-  color: #dd4b39;
-  opacity: 0.9;
-  transform: scale(1);
-  transition: 0.3s;
-}
-
-.fa-google-plus-square:hover{
-  opacity: 1;
-  transform: scale(1.2);
-}
-
-.fa-linkedin-square{
-  color: #007bb6;
-  opacity: 0.9;
-  transform: scale(1);
-  transition: 0.3s;
-}
-
-.fa-linkedin-square:hover{
-  opacity: 1;
-  transform: scale(1.2);
-}
-
 .header-back-btn{
   font-size: 1.5em;
 }
@@ -831,6 +824,11 @@ html.no-csstransforms3d .headroom {
 }
 
 /* Resolution iphone*/
+
+.social-buttons > div, .social-buttons > iframe{
+  vertical-align: top;
+  margin: 0 16px 0 0 !important;
+}
 
 @media only screen and (min-width: 320px){
   .footer .footer-tools img:last-child{

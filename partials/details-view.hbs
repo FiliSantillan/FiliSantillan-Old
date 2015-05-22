@@ -90,7 +90,19 @@
                             <h1 class="post-title">{{title}}</h1>
                             <div class="post-title-separator"></div>
                             {{!-- Social --}}
-                            <div class="addthis_native_toolbox"></div>
+                            <div class="social-buttons">
+                                {{!-- Facebook --}}
+                                <div class="fb-share-button" data-href="{{url absolute="true"}}" data-layout="box_count"></div>
+                                {{!-- Twitter --}}
+                                <a class="twitter-share-button"
+                                  href="{{url absolute="true"}}" data-count="vertical">
+                                Tweet</a>
+                                {{!-- Google --}}
+                                <div class="g-plusone" data-size="tall" data-href="{{url absolute="true"}}"></div>
+                                {{!-- Linkedin --}}
+                                <script src="//platform.linkedin.com/in.js" type="text/javascript"> lang: es_ES</script>
+                                <script type="IN/Share" data-url="{{url absolute="true"}}" data-counter="top"></script>
+                            </div>
                         </div>
                         <div class="post-article-content">
                             {{content}}
@@ -123,7 +135,19 @@
                             </section>
                             <h3 class="post-share-text">¿Te gustó el artículo?, por favor, ayudame a compartir para que otras personas puedan leerlo.</h3>
                             {{!-- Social --}}
-                            <div class="addthis_native_toolbox"></div>
+                            <div class="social-buttons">
+                                {{!-- Facebook --}}
+                                <div class="fb-share-button" data-href="{{url absolute="true"}}" data-layout="box_count"></div>
+                                {{!-- Twitter --}}
+                                <a class="twitter-share-button"
+                                  href="{{url absolute="true"}}" data-count="vertical">
+                                Tweet</a>
+                                {{!-- Google --}}
+                                <div class="g-plusone" data-size="tall" data-href="{{url absolute="true"}}"></div>
+                                {{!-- Linkedin --}}
+                                <script src="//platform.linkedin.com/in.js" type="text/javascript"> lang: es_ES</script>
+                                <script type="IN/Share" data-url="{{url absolute="true"}}" data-counter="top"></script>
+                            </div>
                         </div>
                     </div>
                 </section>
