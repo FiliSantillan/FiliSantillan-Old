@@ -14,7 +14,7 @@
     
     <link rel="shortcut icon" href="{{asset "fili.ico"}}">
 
-    {{! Facebook}}
+    {{! Facebook }}
     <div id="fb-root"></div>
     <script>(function(d, s, id) {
       var js, fjs = d.getElementsByTagName(s)[0];
@@ -23,6 +23,10 @@
       js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.3";
       fjs.parentNode.insertBefore(js, fjs);
     }(document, 'script', 'facebook-jssdk'));</script>
+
+
+    {{! Twitter }}
+    <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
 
     {{! Styles - Foundation 5 included}}
 
@@ -122,6 +126,10 @@
       min: $.validator.format("Por favor, escribe un valor mayor o igual a {0}.")
     });}(jQuery));var $mcj = jQuery.noConflict(true);
     </script>
+
+    <!-- Go to www.addthis.com/dashboard to customize your tools -->
+    <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-555d88b119caf78c" async="async"></script>
+
 
 </body>
 </html>
