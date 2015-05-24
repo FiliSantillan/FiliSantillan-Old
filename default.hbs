@@ -113,12 +113,16 @@
     });}(jQuery));var $mcj = jQuery.noConflict(true);
     </script>
     <script>
-      $.getScript('http://platform.twitter.com/widgets.js');
 
+      //Facebook
       $.getScript("http://connect.facebook.net/es_LA/all.js#xfbml=1", function () {
            FB.init({ status: true, cookie: true, xfbml: true });
       });
 
+      // Twitter
+      $.getScript('http://platform.twitter.com/widgets.js');
+
+      // Linkedin
       $.getScript("http://platform.linkedin.com/in.js");
     </script>
 </html>
