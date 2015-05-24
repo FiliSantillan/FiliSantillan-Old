@@ -112,5 +112,13 @@
       min: $.validator.format("Por favor, escribe un valor mayor o igual a {0}.")
     });}(jQuery));var $mcj = jQuery.noConflict(true);
     </script>
-</body>
+    <script>
+      $.getScript('http://platform.twitter.com/widgets.js');
+
+      $.getScript("http://connect.facebook.net/es_LA/all.js#xfbml=1", function () {
+           FB.init({ status: true, cookie: true, xfbml: true });
+      });
+
+      $.getScript("http://platform.linkedin.com/in.js");
+    </script>
 </html>
