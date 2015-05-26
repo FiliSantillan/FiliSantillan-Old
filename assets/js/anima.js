@@ -380,108 +380,108 @@ var anima = (function ($) {
 
     // smooth state tool init and plugins reinit on page change
     // http://weblinc.github.io/jquery.smoothState.js/
-    smoothState = function () {
-        var $main = $('#main');
-        var animDuration = 400;
-        $main.smoothState({
-            prefetch: true,
-            pageCacheSize: 0,
-            blacklist: '.anima-image-popup, .no-smoothstate', // smooth state will not work on image popup links and links with no-smoothstate class
-            onStart: {
-                duration: animDuration,
-                render: function (url, $container) {
-                    $('.js-menu-container').removeClass('show-menu');
-                    $main.find('.fade-in-left').velocity({
-                        translateZ: 0,
-                        translateX: '-100%'
-                    }, {duration: animDuration});
-                    $main.find('.fade-in-right').velocity({
-                        translateZ: 0,
-                        translateX: '200%'
-                    }, {duration: animDuration});
-                    $main.find('.fade-in-up').velocity({
-                        translateZ: 0,
-                        translateY: '100%'
-                    }, {duration: animDuration});
-                    $main.find('.fade-in-down').velocity({
-                        translateZ: 0,
-                        translateY: '-100%'
-                    }, {duration: animDuration});
-                    $main.find('.fade-in').velocity({
-                        translateZ: 0,
-                        opacity: 0
-                    }, {duration: animDuration});
-                }
-            },
-            onProgress : {
-                duration: 0,
-                render: function (url, $container) {}
-            },
-            onEnd: {
-                duration: 0,
-                render: function (url, $container, $content) {
-                    $container.html($content);
-                    $main.find('.fade-in-left').velocity({
-                        translateZ: 0,
-                        translateX: [0, '-100%']
-                    }, {duration: animDuration});
-                    $main.find('.fade-in-right').velocity({
-                        translateZ: 0,
-                        translateX:  [0, '200%']
-                    }, {duration: animDuration});
-                    $main.find('.fade-in-up').velocity({
-                        translateZ: 0,
-                        translateY: [0, '100%']
-                    }, {duration: animDuration});
-                    $main.find('.fade-in-down').velocity({
-                        translateZ: 0,
-                        translateY: [0, '-100%']
-                    }, {duration: animDuration});
-                    $main.find('.fade-in').velocity({
-                        translateZ: 0,
-                        opacity: [1, 0]
-                    }, {duration: animDuration});
-                    $(window).scrollTop(0);
-                }
-            },
-            callback : function(url, $container, $content) {
-                // foundation reflow
-                $(document).foundation('reflow');
-                // code highlighter init
-                syntaxHighlighter();
-                // nicescroll reinit if needed
-                niceScrollReinit();
-                niceScrollShowEvent();
-                // main menu reinit
-                mainMenu();
-                // gototop button reinit
-                goToTopBtn();
-                // reading time counter reinit
-                readingTime();
-                // reading position indicator reinit
-                positionIndicator();
-                // sticky header init
-                headroom();
-                // index grid and filters reinit
-                shuffle();
-                indexGridFilter();
-                // index page filters prepare reinit
-                prepareFilters();
-                // filter tags selector reinit
-                filterTagsSelector();
-                // search module reinit
-                searchModule();
-                // recent posts list reinit
-                recentPostsParseFeed();
-                // reset disqus page
-                disqus(window.location.href, window.location.href, $('.post-title').text());
-                // image carousel reinit
-                imageCarousel();
-                // image lightbox reinit
-                imageLightbox();
-            }
-        }).data('smoothState');
-    },
+    // smoothState = function () {
+    //     var $main = $('#main');
+    //     var animDuration = 400;
+    //     $main.smoothState({
+    //         prefetch: true,
+    //         pageCacheSize: 0,
+    //         blacklist: '.anima-image-popup, .no-smoothstate', // smooth state will not work on image popup links and links with no-smoothstate class
+    //         onStart: {
+    //             duration: animDuration,
+    //             render: function (url, $container) {
+    //                 $('.js-menu-container').removeClass('show-menu');
+    //                 $main.find('.fade-in-left').velocity({
+    //                     translateZ: 0,
+    //                     translateX: '-100%'
+    //                 }, {duration: animDuration});
+    //                 $main.find('.fade-in-right').velocity({
+    //                     translateZ: 0,
+    //                     translateX: '200%'
+    //                 }, {duration: animDuration});
+    //                 $main.find('.fade-in-up').velocity({
+    //                     translateZ: 0,
+    //                     translateY: '100%'
+    //                 }, {duration: animDuration});
+    //                 $main.find('.fade-in-down').velocity({
+    //                     translateZ: 0,
+    //                     translateY: '-100%'
+    //                 }, {duration: animDuration});
+    //                 $main.find('.fade-in').velocity({
+    //                     translateZ: 0,
+    //                     opacity: 0
+    //                 }, {duration: animDuration});
+    //             }
+    //         },
+    //         onProgress : {
+    //             duration: 0,
+    //             render: function (url, $container) {}
+    //         },
+    //         onEnd: {
+    //             duration: 0,
+    //             render: function (url, $container, $content) {
+    //                 $container.html($content);
+    //                 $main.find('.fade-in-left').velocity({
+    //                     translateZ: 0,
+    //                     translateX: [0, '-100%']
+    //                 }, {duration: animDuration});
+    //                 $main.find('.fade-in-right').velocity({
+    //                     translateZ: 0,
+    //                     translateX:  [0, '200%']
+    //                 }, {duration: animDuration});
+    //                 $main.find('.fade-in-up').velocity({
+    //                     translateZ: 0,
+    //                     translateY: [0, '100%']
+    //                 }, {duration: animDuration});
+    //                 $main.find('.fade-in-down').velocity({
+    //                     translateZ: 0,
+    //                     translateY: [0, '-100%']
+    //                 }, {duration: animDuration});
+    //                 $main.find('.fade-in').velocity({
+    //                     translateZ: 0,
+    //                     opacity: [1, 0]
+    //                 }, {duration: animDuration});
+    //                 $(window).scrollTop(0);
+    //             }
+    //         },
+    //         callback : function(url, $container, $content) {
+    //             // foundation reflow
+    //             $(document).foundation('reflow');
+    //             // code highlighter init
+    //             syntaxHighlighter();
+    //             // nicescroll reinit if needed
+    //             niceScrollReinit();
+    //             niceScrollShowEvent();
+    //             // main menu reinit
+    //             mainMenu();
+    //             // gototop button reinit
+    //             goToTopBtn();
+    //             // reading time counter reinit
+    //             readingTime();
+    //             // reading position indicator reinit
+    //             positionIndicator();
+    //             // sticky header init
+    //             headroom();
+    //             // index grid and filters reinit
+    //             shuffle();
+    //             indexGridFilter();
+    //             // index page filters prepare reinit
+    //             prepareFilters();
+    //             // filter tags selector reinit
+    //             filterTagsSelector();
+    //             // search module reinit
+    //             searchModule();
+    //             // recent posts list reinit
+    //             recentPostsParseFeed();
+    //             // reset disqus page
+    //             disqus(window.location.href, window.location.href, $('.post-title').text());
+    //             // image carousel reinit
+    //             imageCarousel();
+    //             // image lightbox reinit
+    //             imageLightbox();
+    //         }
+    //     }).data('smoothState');
+    // },
 
     // anima javascripts initialization
     init = function () {
@@ -496,7 +496,7 @@ var anima = (function ($) {
         headroom();
         niceSroll();
         niceScrollShowEvent();
-        smoothState();
+        // smoothState();
         shuffle();
         prepareFilters();
         filterTagsSelector();
