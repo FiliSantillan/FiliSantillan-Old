@@ -398,7 +398,7 @@ html.no-csstransforms3d .headroom {
         display: block; }
       @media only screen and (min-width: 40.063em) {
         .loop .post-row .post-block-grid .post-block-grid-content {
-          padding: 3.125rem; } }
+          padding: 1.5rem; } }
     .loop .post-row .post-block-grid figure {
       position: relative;
       float: left;
