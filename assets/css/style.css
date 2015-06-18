@@ -828,12 +828,27 @@ html.no-csstransforms3d .headroom {
   background: #F4483A;
 }
 
-/* Resolution iphone*/
 
 .social-buttons > div, .social-buttons > iframe{
   vertical-align: top;
   margin: 0 16px 0 0 !important;
 }
+
+.portafolio img{
+  border: 3px solid #2D79AC;
+}
+
+.portafolio figcaption{
+  margin: 1em 0 0 0;
+}
+
+.portafolio figcaption h4{
+  text-transform: uppercase;
+  font-size: 2em;
+}
+  
+
+/* Resolution iphone*/
 
 @media only screen and (min-width: 320px){
   .footer .footer-tools img:last-child{
