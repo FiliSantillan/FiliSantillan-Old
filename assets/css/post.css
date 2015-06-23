@@ -9,7 +9,7 @@
   line-height: 3.125rem;
   text-align: center;
   z-index: 10;
-  color: #23222d;
+  color: #2D79AC;
   cursor: pointer;
   -webkit-transform: translateZ(0);
   transform: translateZ(0);
@@ -208,7 +208,6 @@
       min-height: 100%; }
       .post-view .post-view-content .post-view-right-container .post-view-article {
         width: 100%;
-        max-width: 57.5rem;
         padding: 3.75rem 0; }
         .post-view .post-view-content .post-view-right-container .post-view-article .post-article-content p, ul{
           font-size: 1.1rem;
@@ -285,7 +284,7 @@
             font-weight: 600; }
         @media only screen and (min-width: 48em) {
           .post-view .post-view-content .post-view-right-container .post-view-article {
-            padding: 6.25rem 3.75rem 3.75rem; } }
+            padding: 5rem 0.60rem; } }
         @media only screen and (min-width: 90.063em) {
           .post-view .post-view-content .post-view-right-container .post-view-article {
             max-width: 63.75rem;
