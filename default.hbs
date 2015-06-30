@@ -118,10 +118,57 @@
            FB.init({ status: true, cookie: true, xfbml: true });
       });
 
+      if (typeof (FB) != 'undefined') {
+           FB.init({ status: true, cookie: true, xfbml: true });
+      }
+      function loadFacebook()
+      {
+          if (typeof (FB) != 'undefined') {
+              FB.init({ status: true, cookie: true, xfbml: true });
+          } else {
+              $.getScript("http://connect.facebook.net/es_LA/all.js#xfbml=1", function () {
+                  FB.init({ status: true, cookie: true, xfbml: true });
+              });
+          }
+      }
+
       // Twitter
       $.getScript('http://platform.twitter.com/widgets.js');
 
+      if (typeof (twttr) != 'undefined'){
+           twttr.widgets.load();
+      }
+
+      function loadTwitter()
+      {
+          if (typeof (twttr) != 'undefined'){
+              twttr.widgets.load();
+          } else {
+              $.getScript('http://platform.twitter.com/widgets.js');
+          }
+      }
+
+      // Google Plus
+      (function() {
+        var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+        po.src = 'https://apis.google.com/js/plusone.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+      })();
+
       // Linkedin
       $.getScript("http://platform.linkedin.com/in.js");
+
+      if (typeof (IN) != 'undefined') {
+           IN.parse();
+      }
+      function loadLinkedIn()
+      {
+           if (typeof (IN) != 'undefined') {
+                IN.parse();
+           } else {
+                $.getScript("http://platform.linkedin.com/in.js");
+
+           }
+      }
     </script>
 </html>
