@@ -370,6 +370,7 @@ var anima = (function ($) {
         if($gallery.length) {
             $gallery.each(function() {
                 $(this).owlCarousel({
+                    items : 3,
                     autoPlay: 2500,
                     stopOnHover: true,
                     itemsScaleUp: true
@@ -377,7 +378,6 @@ var anima = (function ($) {
             });
         }
     },
-
     // smooth state tool init and plugins reinit on page change
     // http://weblinc.github.io/jquery.smoothState.js/
     // smoothState = function () {
