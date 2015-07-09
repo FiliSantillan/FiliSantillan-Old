@@ -6,18 +6,8 @@
                 <div class="{{post_class}} js-post-block-grid-item post-block-grid-item" data-tags="{{#foreach tags}}{{#if @first}}{{name}}{{else}},{{name}}{{/if}}{{/foreach}}" data-groups='["{{#foreach tags}}{{#if @first}}{{name}}{{else}}","{{name}}{{/if}}{{/foreach}}"]'>
                     <div class="post-block-wrapper">
                         {{#if image}}
-                            <figure class="effect-hera">
-                                <img src="{{image}}" alt="{{title}}" class="index-post-image">
-                                <figcaption>
-                                    <p>
-                                        <a href="{{url}}">
-                                            <i class="fa fa-fw fa-link"></i>
-                                        </a>
-                                        <a href="{{image}}" class="anima-image-popup">
-                                            <i class="fa fa-fw fa-search"></i>
-                                        </a>
-                                    </p>
-                                </figcaption>
+                            <figure>
+                                <a href="{{url}}"><img src="{{image}}" alt="{{title}}" class="index-post-image"></a>
                             </figure>
                         {{/if}}
                         <div class="post-block-grid-content {{#if image}}with-image{{else}}no-image{{/if}}">
