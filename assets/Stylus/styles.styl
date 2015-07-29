@@ -897,6 +897,60 @@ html.no-csstransforms3d .headroom {
   
   &:hover
     transform scale(1.1)
+    
+.agenda
+  background white
+  margin 2rem 0
+  padding 0.5em
+  
+  .agenda-img
+    margin 0
+    width 100%
+    
+  .agenda-info
+    .h2
+      margin 0.5em 0
+      color #2D79AC
+      
+    .h3:before
+      content '" '
+      
+    .h3:after
+      content ' "'
+      
+    .strong
+      display block
+      font-size 1.2em
+      margin 0.2em 0
+      color #E34949
+      
+    .place
+      .icon
+        margin 0 0.5em 0 0.2em
+      
+    .date
+      .icon
+        margin 0 0.3em 0 0
+        
+@media only screen and (min-width: 48em)
+
+  .agenda
+    
+    .agenda-img
+      width 40%
+      display inline-block
+      vertical-align top
+      
+    .agenda-info
+      width 57%
+      margin 0 0 0 2%
+      display inline-block
+      
+      .h2
+        margin 0
+        
+
+      
 
 /* Resolution iphone*/
 
