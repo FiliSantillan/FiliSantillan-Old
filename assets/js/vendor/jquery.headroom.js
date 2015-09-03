@@ -1,7 +1,1 @@
-/*!
- * headroom.js v0.7.0 - Give your page some headroom. Hide your header until you need it
- * Copyright (c) 2014 Nick Williams - http://wicky.nillia.ms/headroom.js
- * License: MIT
- */
-
-!function(a){a&&(a.fn.headroom=function(b){return this.each(function(){var c=a(this),d=c.data("headroom"),e="object"==typeof b&&b;e=a.extend(!0,{},Headroom.options,e),d||(d=new Headroom(this,e),d.init(),c.data("headroom",d)),"string"==typeof b&&d[b]()})},a("[data-headroom]").each(function(){var b=a(this);b.headroom(b.data())}))}(window.Zepto||window.jQuery);
+!function(o){o&&(o.fn.headroom=function(t){return this.each(function(){var a=o(this),e=a.data("headroom"),n="object"==typeof t&&t;n=o.extend(!0,{},Headroom.options,n),e||(e=new Headroom(this,n),e.init(),a.data("headroom",e)),"string"==typeof t&&e[t]()})},o("[data-headroom]").each(function(){var t=o(this);t.headroom(t.data())}))}(window.Zepto||window.jQuery);
