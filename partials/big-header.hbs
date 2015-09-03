@@ -25,13 +25,13 @@
             {{/is}}
         {{/is}}>
 
-        <div class="main-header-bars">
+        <div class="main-header-bars animated bounceInDown">
             <i class="fa fa-fw fa-search js-open-search"></i>
             {{#if @blog.navigation}}
                 <i class="fa fa-fw fa-bars js-open-main-menu"></i>
             {{/if}}
         </div>
-        <div class="row main-header-content">
+        <div class="row main-header-content animated bounceInLeft">
             <div class="small-12 columns">
                 <h1 class="page-title"><span>{{@blog.title}}</span></h1>
                 <h2 class="page-description"><span>Web Developer</span></h2>
@@ -45,7 +45,7 @@
         {{! The index page filters }}
         <div class="index-filters">
             <div class="row">
-                <div class="follow small-12 medium-6 columns">
+                <div class="follow small-12 medium-6 columns animated bounceInRight">
                     {{!-- Facebook --}}
                     <a href="https://www.facebook.com/FiliSantillanMX" target="blank">
                         <i class="fa fa-facebook-square"></i>
@@ -70,9 +70,13 @@
                     <a href="https://github.com/FiliMX" target="blank">
                         <i class="fa fa-github-square"></i>
                     </a>
+                    {{!-- Mail --}}
+                    <a href="mailto:fili06604@gmail.com">
+                        <i class="fa fa-envelope"></i>
+                    </a>
 
                 </div>
-                <div class="medium-6 columns text-right view">
+                <div class="medium-6 columns text-right view animated bounceInUp">
                     <a href="#" class="js-grid-filter-button">
                         <i class="fa fa-fw fa-th"></i>
                     </a>
