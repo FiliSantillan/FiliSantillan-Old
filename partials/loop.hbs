@@ -12,16 +12,10 @@
                         {{/if}}
                         <div class="post-block-grid-content {{#if image}}with-image{{else}}no-image{{/if}}">
                             <header class="post-header">
-                                <time class="post-date" datetime="{{date format='YYYY-MM-DD'}}">{{date timeago="true"}} por {{author}}</time>
                                 <h2 class="post-title"><a href="{{url}}">{{title}}</a></h2>
                                 <div class="post-title-separator"></div>
+                                <time class="post-date" datetime="{{date format='YYYY-MM-DD'}}">{{date format="DD MMM YYYY"}}</time>
                             </header>
-                            <section>
-                                {{excerpt words="40"}} ...
-                            </section>
-                            <footer class="post-meta">
-                                <div>{{tags prefix=" Tags: "}}</div>
-                            </footer>
                             <div>
                                 <a href="{{url}}" class="post-read-more-btn">Leer más ...</a>
                             </div>

@@ -596,12 +596,8 @@ html[data-useragent*='Android 4.2'] .icon-list {
   line-height: 1.2;
   padding: 0.3125rem 0;
 }
-.post-view .post-view-sidebar .post-view-elems .post-view-elems-body .post-recent-list ul li a:before {
-  content: "• ";
-  color: #fff;
-}
 .post-view .post-view-sidebar .post-view-elems .post-view-elems-body .post-recent-list ul li a {
-  font-weight: 400;
+  font-weight: 300;
   color: #fff;
   display: inline-block;
   -webkit-transition: color 0.3s;
@@ -610,7 +606,7 @@ html[data-useragent*='Android 4.2'] .icon-list {
 .post-view .post-view-sidebar .post-view-elems .post-view-elems-body .post-recent-list ul li a:hover,
 .post-view .post-view-sidebar .post-view-elems .post-view-elems-body .post-recent-list ul li a:focus,
 .post-view .post-view-sidebar .post-view-elems .post-view-elems-body .post-recent-list ul li a:active {
-  color: #999;
+  color: #2d79ac;
   text-decoration: none;
 }
 @media only screen and (min-width: 64em) {
@@ -707,6 +703,7 @@ ul {
 .post-view .post-view-content .post-view-right-container .post-view-article .post-header-content .post-title {
   font-size: 2.25rem;
   line-height: 1.1;
+  margin: 0.5rem 0;
 }
 @media only screen and (min-width: 30em) {
   .post-view .post-view-content .post-view-right-container .post-view-article .post-header-content .post-title {
@@ -737,6 +734,9 @@ ul {
 }
 .post-view .post-view-content .post-view-right-container .post-view-article .post-header-content .post-meta {
   font-weight: 600;
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+  color: #858590;
 }
 @media only screen and (min-width: 48em) {
   .post-view .post-view-content .post-view-right-container .post-view-article {
@@ -1293,7 +1293,7 @@ html.no-csstransforms3d .headroom.headroom--top {
   overflow: hidden;
 }
 .loop {
-  padding-top: 3.75rem;
+  padding-top: 1.75rem;
   padding-bottom: 3.75rem;
 }
 .loop .post-row {
@@ -1317,11 +1317,13 @@ html.no-csstransforms3d .headroom.headroom--top {
 }
 @media only screen and (min-width: 62.5em) {
   .loop .post-row .post-block-grid .post-block-grid-item {
-    width: 50%;
+    width: 33.33%;
   }
 }
 .loop .post-row .post-block-grid .post-block-grid-item .post-block-wrapper {
   overflow: hidden;
+  border: 2px solid;
+  border-radius: 4px;
 }
 @media only screen and (min-width: 62.5em) {
   .loop .post-row .post-block-grid .post-block-grid-item.list {
@@ -1386,7 +1388,7 @@ html.no-csstransforms3d .headroom.headroom--top {
 }
 @media only screen and (min-width: 40.063em) {
   .loop .post-row .post-block-grid .post-block-grid-content {
-    padding: 1.5rem;
+    padding: 0.5rem 1rem;
   }
 }
 .loop .post-row .post-block-grid figure {
@@ -1558,16 +1560,17 @@ html.no-csstransforms3d .headroom.headroom--top {
   width: 100%;
 }
 .loop .post-row .post .post-title {
-  font-weight: 900;
+  font-weight: 300;
+  font-size: 1.7rem;
   text-transform: none;
   line-height: 1.1;
   padding-bottom: 0.625rem;
   padding-top: 0.625rem;
 }
 .loop .post-row .post .post-title-separator {
-  width: 4.375rem;
+  width: 100%;
   height: 0.3125rem;
-  margin-bottom: 1.25rem;
+  margin-bottom: 0.5rem;
   background-color: #23222d;
 }
 .loop .post-row .post .post-meta {
@@ -1928,6 +1931,9 @@ html.no-csstransforms3d .headroom.headroom--top {
 }
 .agenda .agenda-info .date .icon {
   margin: 0 0.3em 0 0;
+}
+.twitter-tweet {
+  margin: 0 auto;
 }
 @media only screen and (min-width: 48em) {
   .agenda .agenda-img {

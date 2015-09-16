@@ -82,13 +82,13 @@
                 <section class="post-content row">
                     <div class="small-12 columns">
                         <div class="post-header-content">
+                            <h1 class="post-title">{{title}}</h1>
                             {{#is "post"}}
                                 <section class="post-meta js-bg-check">
+                                    <i class="fa fa-calendar-o"></i>
                                     <time class="post-date" datetime="{{date format='YYYY-MM-DD'}}">{{date format="DD MMM YYYY"}}</time>
                                 </section>
                             {{/is}}
-                            <h1 class="post-title">{{title}}</h1>
-                            <div class="post-title-separator"></div>
                             {{!-- Social --}}
                             <div class="social-buttons">
                                 {{!-- Facebook --}}
