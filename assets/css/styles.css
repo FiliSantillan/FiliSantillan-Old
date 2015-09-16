@@ -1324,6 +1324,7 @@ html.no-csstransforms3d .headroom.headroom--top {
   overflow: hidden;
   border: 2px solid;
   border-radius: 4px;
+  background: #fff;
 }
 @media only screen and (min-width: 62.5em) {
   .loop .post-row .post-block-grid .post-block-grid-item.list {
