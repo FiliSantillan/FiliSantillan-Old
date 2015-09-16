@@ -378,6 +378,23 @@ var anima = (function ($) {
 			});
 		}
 	},
+
+	autoHeight = function (){
+		if (document.documentElement.clientWidth >= 990) {
+
+			var $height = 0 ;
+			$(".post-block-wrapper").each(function(){
+			    if(($(this).height())>$height){
+			            $height = $(this).height();
+			    }
+			});
+			$(".post-block-wrapper").each(function(){
+			    $(this).css("height",$height)
+			});
+		}
+
+	},
+
 	// smooth state tool init and plugins reinit on page change
 	// http://weblinc.github.io/jquery.smoothState.js/
 	// smoothState = function () {
@@ -486,6 +503,7 @@ var anima = (function ($) {
 	// anima javascripts initialization
 	init = function () {
 		$(document).foundation();
+		autoHeight();
 		userAgentInit();
 		syntaxHighlighter();
 		mainMenu();
