@@ -9,8 +9,8 @@
 {{! Everything inside the #post tags pulls data from the post }}
 {{#post}}
 <div class="post-view">
-    <aside class="post-view-sidebar scene-element fade-in-left" {{#if image}}style="background-image: url({{image}});"{{else}}{{#if @blog.cover}}style="background-image: url({{@blog.cover}});"{{/if}}{{/if}}>
-        <div class="post-view-elems">
+    <aside class="post-view-sidebar scene-element" {{#if image}}style="background-image: url({{image}});"{{else}}{{#if @blog.cover}}style="background-image: url({{@blog.cover}});"{{/if}}{{/if}}>
+        <div class="post-view-elems animated bounceInLeft">
             <div class="post-view-elems-header">
                 <a href="{{@blog.url}}" class="header-back-btn">
                     <i class="fa fa-chevron-left"></i> Inicio
@@ -64,7 +64,7 @@
                 {{/is}}
                 {{!-- here will land your recent posts --}}
                 {{!-- you can change items amout here --}}
-                <div class="post-recent-list js-post-view-recent" data-items="6">
+                <div class="post-recent-list js-post-view-recent" data-items="5">
                     <div class="post-recent-list-label">
                         <span>Posts Recientes</span>
                     </div>
@@ -76,10 +76,10 @@
             </div>
         </div>
     </aside>
-    <main class="post-view-content scene-element fade-in-right" role="main">
+    <main class="post-view-content scene-element" role="main">
         <div class="post-view-right-container">
             <article class="post-view-article {{post_class}}">
-                <section class="post-content row">
+                <section class="post-content row animated bounceInRight">
                     <div class="small-12 columns">
                         <div class="post-header-content">
                             <h1 class="post-title">{{title}}</h1>

@@ -7,11 +7,9 @@ var gulp = require('gulp'),
 
 gulp.task('styles', function () {
   gulp.src('./assets/Stylus/styles.styl')
-    .pipe(stylus())
-    .pipe(gulp.dest('./assets/css/'));
-
-  gulp.src('./assets/Stylus/post.styl')
-    .pipe(stylus())
+    .pipe(stylus({
+      compress: true
+    }))
     .pipe(gulp.dest('./assets/css/'));
 });
 
